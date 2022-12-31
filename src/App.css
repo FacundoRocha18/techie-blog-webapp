@@ -1,0 +1,24 @@
+#vite:hover,
+#eslint:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+#react:hover,
+#tailwind:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+#ts:hover,
+#netlify:hover {
+  filter: drop-shadow(0 0 2em #0876d6aa);
+}
+
+#router:hover,
+#prettier:hover,
+#jest:hover {
+  filter: drop-shadow(0 0 2em #e21b05aa);
+}
+
+.container {
+  background-color: #f3f4f6;
+}
