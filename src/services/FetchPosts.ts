@@ -1,5 +1,5 @@
 export const fetchPosts = async () => {
-	const url = 'http://localhost:8000/posts'
+	const url = 'http://localhost:8000/api/posts'
 
 	const params = {
 		method: 'GET',
@@ -11,8 +11,6 @@ export const fetchPosts = async () => {
 	const response = await fetch(url, params)
 
 	const { data } = await response.json()
-
-	console.log(data)
 
 	return data
 }

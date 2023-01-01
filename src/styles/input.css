@@ -2,40 +2,30 @@
 
 @layer base {
   body {
-    @apply h-screen w-screen  text-center font-poppins text-white;
+    @apply h-screen w-screen font-poppins text-white;
   }
 
-  #icons-grid {
-    @apply grid grid-cols-3;
-    @apply desktop:flex;
-  }
-
-  .logo {
-    @apply my-0 mx-auto h-[7em] p-[1.5em] will-change-filter;
-  }
-
-  .card {
-    @apply p-[2em];
-  }
-
-  .read-the-docs {
-    @apply text-[#c0c0c0];
-  }
-
-  #container {
-    @apply h-full min-h-screen w-full p-4 transition-colors duration-150 ease-linear;
-    @apply tablet:flex tablet:items-center tablet:justify-center;
-    @apply desktop:flex desktop:items-center desktop:justify-center;
+  #home-container,
+	#post-container {
+    @apply h-full min-h-screen w-full p-4 mt-24 transition-colors duration-150 ease-linear;
+    @apply tablet:flex tablet:items-center tablet:justify-center tablet:p-8;
+    @apply desktop:flex desktop:items-center desktop:justify-center desktop:p-16;
   }
 
   h1 {
-    @apply text-center text-smTitle font-bold;
+    @apply text-smTitle font-semibold;
     @apply tablet:text-subtitle;
+    @apply desktop:text-title;
   }
 
   h2 {
     @apply text-smSubtitle font-semibold;
   }
+
+	h3 {
+		@apply text-lg font-medium;
+	}
+
 }
 
 @tailwind components;
