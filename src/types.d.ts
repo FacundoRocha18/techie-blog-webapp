@@ -1,10 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 export interface IThemeContext {
-	theme: {
-		background: string
-		fontColor: string
-	}
+	theme: Theme
 	themeName: string
 	toggleTheme: Function
 }
@@ -18,6 +15,7 @@ export type ThemeType = 'light' | 'dark'
 
 export interface Theme {
 	background: string
+	card: string
 	fontColor: string
 }
 
@@ -44,11 +42,16 @@ export interface IPost {
 	authorUuid: number
 	authorName: string
 	content: string
-	postedDate: Date | string
+	postedDate: string
 	reactions: IReaction[] | null[]
 	comments: IComment[] | null[]
 }
 
-interface ChildrenProps {
-  children: React.ReactNode
+export interface ChildrenProps {
+	children: React.ReactNode
+}
+
+export interface CustomLinkProps {
+	path: string
+	text: string
 }

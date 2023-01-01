@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { createContextCustom } from 'hooks'
 import { Theme, ThemeType, IThemeContext, ChildrenProps} from 'types'
 
-enum Colors {
+enum BackgroundColors {
   LIGHTGREY = 'bg-gray-100',
+  GREY = 'bg-gray-300',
   DARKGREY = 'bg-gray-800',
+	DARKERGREY = 'bg-gray-900'
 }
 
 enum TextColors {
@@ -14,11 +16,13 @@ enum TextColors {
 
 const THEMES: Record<ThemeType, Theme> = {
   light: {
-    background: Colors.LIGHTGREY,
+    background: BackgroundColors.LIGHTGREY,
+		card: BackgroundColors.GREY,
     fontColor: TextColors.DARKGREY,
   },
   dark: {
-    background: Colors.DARKGREY,
+    background: BackgroundColors.DARKGREY,
+		card: BackgroundColors.DARKERGREY,
     fontColor: TextColors.LIGHTGREY,
   },
 }
