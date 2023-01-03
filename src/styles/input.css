@@ -1,15 +1,26 @@
 @tailwind base;
 
 @layer base {
-  body {
-    @apply h-screen w-screen font-poppins text-white;
+  * {
+    @apply m-0 box-border p-0;
   }
 
-  #home-container,
-	#post-container {
-    @apply h-full min-h-screen w-full p-4 mt-24 transition-colors duration-150 ease-linear;
-    @apply tablet:flex tablet:items-center tablet:justify-center tablet:p-8;
-    @apply desktop:flex desktop:items-center desktop:justify-center desktop:p-16;
+  img,
+  picture,
+  svg,
+  video {
+    @apply block max-w-full;
+  }
+
+  input,
+  textarea,
+  button,
+  select {
+    font: inherit;
+  }
+
+  body {
+    @apply h-screen font-poppins text-white;
   }
 
   h1 {
@@ -22,15 +33,40 @@
     @apply text-smSubtitle font-semibold;
   }
 
-	h3 {
-		@apply text-lg font-medium;
-	}
-
+  h3 {
+    @apply text-lg font-medium;
+  }
 }
 
 @tailwind components;
 
 @layer components {
+  #app-container {
+    @apply h-full min-h-screen transition-colors duration-150 ease-linear;
+    @apply tablet:flex tablet:items-center tablet:justify-center;
+    @apply desktop:flex desktop:items-center desktop:justify-center;
+  }
+
+  #home-container,
+  #post-container {
+    @apply mx-auto mt-24 h-full min-h-screen w-100% p-4 transition-colors duration-150 ease-linear;
+    @apply tablet:flex tablet:justify-center tablet:p-8;
+    @apply desktop:flex desktop:w-60% desktop:justify-center desktop:p-8;
+  }
+
+  #news-container {
+    @apply desktop:w-60%;
+  }
+
+  #card-container {
+    @apply flex h-fit w-full items-center justify-around gap-4 rounded border-solid border-gray-800 p-2 text-left;
+    @apply tablet:gap-8 tablet:p-4;
+  }
+
+  #card-container img {
+    @apply tablet:h-60 tablet:w-96;
+    @apply desktop:h-60 desktop:w-96;
+  }
 }
 
 @tailwind utilities;

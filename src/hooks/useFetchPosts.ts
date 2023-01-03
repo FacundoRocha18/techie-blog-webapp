@@ -1,22 +1,20 @@
-import { useState, useEffect } from 'react';
-import { fetchPosts } from 'services/FetchPosts';
-
+import { useState, useEffect } from 'react'
+import { fetchPosts } from 'services/FetchPosts'
 
 export const useFetchPosts = () => {
-	const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])
 
-	const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
 
-	useEffect(() => {
-		fetchPosts()
-			.then((data) => {
-				if (!data) throw new Error('No se pudo recuperar los datos')
-				setPosts(data)
-				setLoading(false)
-			})
-			.catch(err => console.log(err))
+  useEffect(() => {
+    fetchPosts()
+      .then((data) => {
+        if (!data) throw new Error('No se pudo recuperar los datos')
+        setPosts(data)
+        setLoading(false)
+      })
+      .catch((err) => console.log(err))
+  }, [])
 
-	}, [])
-
-	return [posts, loading] as const
+  return [posts, loading] as const
 }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { createContextCustom } from 'hooks'
-import { Theme, ThemeType, IThemeContext, ChildrenProps} from 'types'
+import { createContextCustom, useLocalStorage } from 'hooks'
+import { Theme, ThemeType, IThemeContext, ChildrenProps } from 'types'
 
 enum BackgroundColors {
   LIGHTGREY = 'bg-gray-100',
   GREY = 'bg-gray-300',
-  DARKGREY = 'bg-gray-800',
-	DARKERGREY = 'bg-gray-900'
+  DARKZINC = 'bg-zinc-700',
+  DARKERZINC = 'bg-zinc-800',
 }
 
 enum TextColors {
@@ -17,20 +17,37 @@ enum TextColors {
 const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: BackgroundColors.LIGHTGREY,
-		card: BackgroundColors.GREY,
+    card: BackgroundColors.GREY,
     fontColor: TextColors.DARKGREY,
   },
   dark: {
-    background: BackgroundColors.DARKGREY,
-		card: BackgroundColors.DARKERGREY,
+    background: BackgroundColors.DARKERZINC,
+    card: BackgroundColors.DARKZINC,
     fontColor: TextColors.LIGHTGREY,
   },
 }
 
 export const [useThemeContext, ContextProvider] = createContextCustom<IThemeContext>()
 
+const [setItem, getItem] = useLocalStorage()
+
+const getSavedTheme = (): ThemeType => {
+  const defaultTheme: ThemeType = 'light'
+  const savedThemeName: ThemeType | null = getItem<ThemeType>('theme')
+
+  if (savedThemeName === null) {
+    return defaultTheme
+  }
+
+  return savedThemeName
+}
+
 export const ThemeProvider = ({ children }: ChildrenProps) => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeType>('light')
+  const savedTheme = getSavedTheme()
+
+  const [currentTheme, setCurrentTheme] = useState<ThemeType>(savedTheme)
+
+  setItem('theme', currentTheme)
 
   const toggleTheme = () => setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
 

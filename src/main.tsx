@@ -9,27 +9,27 @@ import 'styles/input.css'
 import 'styles/material-icons-config.css'
 
 const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Root />,
-		errorElement: <ErrorPage />,
-		children: [
-			{
-				path: '/',
-				element: <Home />
-			},
-			{
-				path: '/posts/:id',
-				element: <Post />
-			}
-		],
-	},
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/posts/:id',
+        element: <Post />,
+      },
+    ],
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-	<React.StrictMode>
-		<ThemeProvider>
-			<RouterProvider router={router} />
-		</ThemeProvider>
-	</React.StrictMode>,
+  <React.StrictMode>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </React.StrictMode>,
 )
