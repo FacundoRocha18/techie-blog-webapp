@@ -17,6 +17,8 @@
 	},
 	"dependencies": {
 		"cssnano": "^5.1.14",
+		"firebase": "^9.15.0",
+		"firebaseui": "^6.0.2",
 		"node": "^19.2.0",
 		"proptypes": "^1.1.0",
 		"react": "^18.2.0",

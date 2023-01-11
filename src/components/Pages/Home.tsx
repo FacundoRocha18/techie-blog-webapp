@@ -1,4 +1,4 @@
-import { NewsSection, PostCard } from 'components'
+import { NewsSection } from 'components'
 import { useThemeContext } from 'contexts/ThemeContext'
 
 export const Home = () => {

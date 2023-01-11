@@ -3,10 +3,12 @@ import { createContextCustom, useLocalStorage } from 'hooks'
 import { Theme, ThemeType, IThemeContext, ChildrenProps } from 'types'
 
 enum BackgroundColors {
-  LIGHTGREY = 'bg-gray-100',
-  GREY = 'bg-gray-300',
+  LIGHTGRAY = 'bg-gray-100',
+  GRAY = 'bg-gray-300',
+	DARKGRAY = 'bg-gray-900',
   DARKZINC = 'bg-zinc-700',
   DARKERZINC = 'bg-zinc-800',
+	MEDIUMSLATE = 'bg-slate-400',
 }
 
 enum TextColors {
@@ -16,12 +18,14 @@ enum TextColors {
 
 const THEMES: Record<ThemeType, Theme> = {
   light: {
-    background: BackgroundColors.LIGHTGREY,
-    card: BackgroundColors.GREY,
+    background: BackgroundColors.LIGHTGRAY,
+		placeholders: BackgroundColors.MEDIUMSLATE,
+    card: BackgroundColors.GRAY,
     fontColor: TextColors.DARKGREY,
   },
   dark: {
     background: BackgroundColors.DARKERZINC,
+		placeholders: BackgroundColors.DARKGRAY,
     card: BackgroundColors.DARKZINC,
     fontColor: TextColors.LIGHTGREY,
   },

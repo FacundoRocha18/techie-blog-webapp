@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { Home, Post } from 'components'
+import { Home, Post, SignIn } from 'components'
 import { ThemeProvider } from 'contexts/ThemeContext'
 import { Root, ErrorPage } from 'routes'
 import 'styles/input.css'
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
         path: '/posts/:id',
         element: <Post />,
       },
+			{
+				path: '/auth/sign-in',
+				element: <SignIn />
+			}
     ],
   },
 ])
