@@ -7,9 +7,9 @@ export const Header = () => {
 
   return (
     <div
-      className={`${theme.fontColor} fixed top-0 left-0 flex h-24 w-screen max-w-full items-center justify-between border-b-2 border-solid border-pink-500 bg-neutral-900 px-10 z-50`}
+      className={`fixed top-0 left-0 flex h-24 w-screen max-w-full items-center justify-between border-b-2 border-solid border-pink-500 px-10 z-50 ${theme.fontColor} ${theme.background}`}
     >
-      <h1 className={`font-medium text-gray-100`}>
+      <h1 className={`font-medium`}>
         <Link to={'/'}>Techie</Link>
       </h1>
       <Toggle />

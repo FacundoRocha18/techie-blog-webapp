@@ -13,13 +13,6 @@ interface IPostsContext {
 
 export type ThemeType = 'light' | 'dark'
 
-export interface Theme {
-  background: string
-	placeholders: string
-  card: string
-  fontColor: string
-}
-
 export interface IReaction {
   reactionId: number
   reactionAuthorId: number

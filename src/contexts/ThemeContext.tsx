@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import { createContextCustom, useLocalStorage } from 'hooks'
-import { Theme, ThemeType, IThemeContext, ChildrenProps } from 'types'
+import { ThemeType, IThemeContext, ChildrenProps } from 'types'
+
+export interface Theme {
+  background: string
+	border: string
+	placeholders: string
+  card: string
+  fontColor: string
+}
 
 enum BackgroundColors {
   LIGHTGRAY = 'bg-gray-100',
@@ -16,15 +24,22 @@ enum TextColors {
   DARKGREY = 'text-gray-900',
 }
 
+enum BorderColors {
+  LIGHTGREY = 'border-gray-100',
+  DARKGREY = 'border-gray-900',
+}
+
 const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: BackgroundColors.LIGHTGRAY,
+		border: BorderColors.DARKGREY,
 		placeholders: BackgroundColors.MEDIUMSLATE,
     card: BackgroundColors.GRAY,
     fontColor: TextColors.DARKGREY,
   },
   dark: {
     background: BackgroundColors.DARKERZINC,
+		border: BorderColors.LIGHTGREY,
 		placeholders: BackgroundColors.DARKGRAY,
     card: BackgroundColors.DARKZINC,
     fontColor: TextColors.LIGHTGREY,

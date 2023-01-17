@@ -23,7 +23,7 @@ export const PostCard = ({ data }: { data: IPost }) => {
 			/>
 			<div className='grid grid-rows-2 grid-cols-3 col-span-3 col-start-2 h-full tablet:gap-4 tablet:grid-rows-6'>
 				<h2 className='text-[20px] font-semibold truncate col-span-3 row-span-1 tablet:text-smSubtitle desktop:text-smSubtitle'>
-					<Link className='hover:text-pink-500' to={`posts/${data.uuid}`}>
+					<Link className='hover:text-pink-500' to={`post/${data.uuid}`}>
 						{data.title}
 					</Link>
 				</h2>
@@ -34,7 +34,7 @@ export const PostCard = ({ data }: { data: IPost }) => {
 					{data.content}
 				</p>
 				<CustomLink
-					path={`/posts/${data.uuid}`}
+					path={`/post/${data.uuid}`}
 					text='Ver noticia'
 					styles='hidden col-span-3 row-span-1 row-start-6 tablet:flex desktop:flex'
 				/>

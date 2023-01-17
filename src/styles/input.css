@@ -18,6 +18,7 @@
   select {
     font: inherit;
 		color: inherit;
+		@apply focus:ring-0;
   }
 
   body {
