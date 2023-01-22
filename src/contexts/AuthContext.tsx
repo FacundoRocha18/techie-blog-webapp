@@ -1,5 +1,5 @@
 import { createContextCustom } from 'hooks'
-import { SignIn } from 'services/FetchSignIn'
+import { RegisterUser } from 'services/RegisterUser'
 import { ChildrenProps } from 'types'
 
 interface IUserContext {
@@ -12,7 +12,7 @@ export const [useAuthContext, ContextProvider] = createContextCustom<IUserContex
 export const AuthProvider = ({ children }: ChildrenProps) => {
   
   const providerValue: IUserContext = {
-    signIn: SignIn
+    signIn: RegisterUser
   }
 
   return <ContextProvider value={providerValue}>{children}</ContextProvider>

@@ -1,14 +1,18 @@
 import { usePostsContext } from 'contexts/PostsContext'
-import { PostCard } from '../Posts/PostCard'
-import { EmptyCard } from 'components/Common/EmptyCard'
+import { PostCard } from '../components/Templates/PostCard'
+import { EmptyCard } from 'components/Templates/EmptyCard'
+import { CContainer, CSection } from 'components'
 
-export const NewsSection = () => {
+export const News = () => {
 	const { posts, loading } = usePostsContext()
 
 	return (
-		<section id='news-container'>
+		<CSection>
 			<h2 className='mb-4 text-left text-smTitle'>Noticias recientes</h2>
 			<div className='grid w-full grid-cols-1 items-center gap-4'>
+
+			</div>
+			<CContainer columns='1' rows={posts.length.toString()} gap='16'>
 				{
 					loading
 						?
@@ -18,9 +22,9 @@ export const NewsSection = () => {
 							<PostCard key={post.uuid} data={post} />
 						))
 				}
-			</div>
-		</section>
+			</CContainer>
+		</CSection>
 	)
 }
 
-NewsSection.propTypes = {}
+News.propTypes = {}

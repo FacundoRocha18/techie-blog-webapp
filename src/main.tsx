@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { Home, Post, SignIn } from 'components'
+import { News, Post, Register } from 'components'
 import { ThemeProvider } from 'contexts/ThemeContext'
 import { Root, ErrorPage } from 'routes'
+
+import 'styles/index.css'
 import 'styles/input.css'
 import 'styles/material-icons-config.css'
 
@@ -16,15 +18,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: <News />,
       },
       {
         path: '/post/:id',
         element: <Post />,
       },
 			{
-				path: 'sign-in',
-				element: <SignIn />
+				path: 'register',
+				element: <Register />
 			}
     ],
   },

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import { IPost } from 'types'
 import { Link } from 'react-router-dom'
-import { CustomLink } from '../Common/CustomLink'
+import { CustomLink } from '../Atoms/CustomLink'
 import { useThemeContext } from 'contexts/ThemeContext'
-import { Image } from 'components/Common/Image'
+import { Image } from 'components/Atoms/Image'
 
 export const PostCard = ({ data }: { data: IPost }) => {
 	const { theme, themeName } = useThemeContext()

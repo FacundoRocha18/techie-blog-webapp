@@ -1,6 +1,6 @@
 import { useThemeContext } from 'contexts/ThemeContext'
 import { Link } from 'react-router-dom'
-import { Toggle } from '../Common/ToggleTheme'
+import { Toggle } from '../Atoms/Toggle'
 
 export const Header = () => {
   const { theme } = useThemeContext()

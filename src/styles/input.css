@@ -1,45 +1,5 @@
 @tailwind base;
 
-@layer base {
-  * {
-    @apply m-0 box-border p-0;
-  }
-
-  img,
-  picture,
-  svg,
-  video {
-    @apply block max-w-full;
-  }
-
-  input,
-  textarea,
-  button,
-  select {
-    font: inherit;
-		color: inherit;
-		@apply focus:ring-0;
-  }
-
-  body {
-    @apply h-screen font-poppins text-white;
-  }
-
-  h1 {
-    @apply text-smTitle font-semibold;
-    @apply tablet:text-subtitle;
-    @apply desktop:text-title;
-  }
-
-  h2 {
-    @apply text-smSubtitle font-semibold;
-  }
-
-  h3 {
-    @apply text-lg font-medium;
-  }
-}
-
 @tailwind components;
 
 @layer components {
@@ -50,8 +10,7 @@
   }
 
   #home-container,
-  #post-container,
-	#signup-container {
+  #post-container {
     @apply mx-auto mt-24 h-full min-h-screen w-100% p-4 transition-colors duration-150 ease-linear;
     @apply tablet:flex tablet:justify-center tablet:p-8;
     @apply desktop:flex desktop:w-60% desktop:justify-center desktop:p-8;
@@ -66,6 +25,10 @@
     @apply grid grid-flow-col grid-cols-4 items-center gap-4 h-fit w-full justify-around rounded border-solid border-gray-800 p-2 text-left;
     @apply tablet:gap-8 tablet:p-4 tablet:grid-cols-2;
   }
+
+	#card-container {
+		@apply gap-0;
+	}
 
   #card-container img {
     @apply tablet:h-60 tablet:w-96;

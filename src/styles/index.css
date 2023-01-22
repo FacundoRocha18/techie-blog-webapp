@@ -1,0 +1,63 @@
+/* Start of CSS resets */
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	scroll-behavior: smooth
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+body {
+	color: rgb(255 255 255);
+	font-family: poppins;
+	height: 100vh;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.125rem; /* 18px */ 
+	font-weight: 500;
+	line-height: 1.75rem ; /* 28px */
+}
+
+@media (min-width: 768px) {
+	.h1 {
+		font-size: 48px;
+	}
+}
+
+@media (min-width: 1080px) {
+	h1 {
+		font-size: 52px;
+	}
+}
+
+/* End of CSS resets */
