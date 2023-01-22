@@ -7,6 +7,7 @@ import { ThemeProvider } from 'contexts/ThemeContext'
 import { Root, ErrorPage } from 'routes'
 
 import 'styles/index.css'
+import 'styles/variables.css'
 import 'styles/input.css'
 import 'styles/material-icons-config.css'
 

@@ -18,8 +18,8 @@ export const Register = () => {
 
 	return (
 		<CSection>
-			<CContainer>
-				<CTitle color={theme.fontColor} >Cree una nueva cuenta</CTitle>
+			<CContainer color={theme.fontColor} display='flex' direction='column' gap='32'>
+				<CTitle alignTo='left'>Cree una nueva cuenta</CTitle>
 				<CForm onSubmit={(e) => handleSubmit(e)}>
 					<CFieldset>
 						<CLabel htmlFor="name-input">Tu nombre:</CLabel>

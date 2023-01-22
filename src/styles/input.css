@@ -3,12 +3,7 @@
 @tailwind components;
 
 @layer components {
-  #app-container {
-    @apply h-full min-h-screen transition-colors duration-150 ease-linear;
-    @apply tablet:flex tablet:items-center tablet:justify-center;
-    @apply desktop:flex desktop:items-center desktop:justify-center;
-  }
-
+  
   #home-container,
   #post-container {
     @apply mx-auto mt-24 h-full min-h-screen w-100% p-4 transition-colors duration-150 ease-linear;

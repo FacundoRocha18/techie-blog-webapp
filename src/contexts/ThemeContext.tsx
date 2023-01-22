@@ -11,22 +11,22 @@ export interface Theme {
 }
 
 enum BackgroundColors {
-  LIGHTGRAY = 'bg-gray-100',
-  GRAY = 'bg-gray-300',
-	DARKGRAY = 'bg-gray-900',
-  DARKZINC = 'bg-zinc-700',
-  DARKERZINC = 'bg-zinc-800',
-	MEDIUMSLATE = 'bg-slate-400',
+  LIGHTGRAY = '--bg-gray-100',
+  GRAY = '--bg-gray-300',
+	DARKGRAY = '--bg-gray-900',
+  DARKZINC = '--bg-zinc-700',
+  DARKERZINC = '--bg-zinc-800',
+	MEDIUMSLATE = '--bg-slate-400',
 }
 
 enum TextColors {
-  LIGHTGREY = 'text-gray-100',
-  DARKGREY = 'text-gray-900',
+  LIGHTGREY = '--text-gray-100',
+  DARKGREY = '--text-gray-900',
 }
 
 enum BorderColors {
-  LIGHTGREY = 'border-gray-100',
-  DARKGREY = 'border-gray-900',
+  LIGHTGREY = '--border-gray-100',
+  DARKGREY = '--border-gray-900',
 }
 
 const THEMES: Record<ThemeType, Theme> = {

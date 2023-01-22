@@ -4,23 +4,24 @@ import { CIcon } from 'components'
 import { ICToggle } from '../components.types'
 
 
-const CToggle = styled('button')<ICToggle>`
+const Toggle = styled('button')<ICToggle>`
 	align-items: center;
-	background-color: ${props => props.toggleBackground};
+	background-color: var(${props => props.background});
+	border: solid 2px var(${props => props.border});
 	border-radius: 9999px;
 	display: flex;
-	justify-content: ${props => props.theme === 'light' ? 'flex-start' : 'flex-end'};
+	justify-content: ${props => props.theme === 'light' ? 'flex-end' : 'flex-start'};
 	width: 4rem; /* 64px */
 `
 
-export const Toggle = () => {
+export const CToggle = () => {
 	const { theme, themeName, toggleTheme } = useThemeContext()
 
 	return (
-		<CToggle toggleBackground={theme.background} theme={themeName} onClick={() => toggleTheme()}>
-			<CIcon className='material-icons slider round'>
-				{themeName === 'light' ? 'light_mode' : 'dark_mode'}
+		<Toggle background={theme.card} border={theme.fontColor} theme={themeName} onClick={() => toggleTheme()}>
+			<CIcon className='material-icons'>
+				{themeName === 'light' ? 'dark_mode' : 'light_mode'}
 			</CIcon>
-		</CToggle>
+		</Toggle>
 	)
 }

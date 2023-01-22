@@ -4,6 +4,9 @@
 	box-sizing: border-box;
 	padding: 0px;
 	margin: 0px;
+	transition-property: all;
+	transition-timing-function: linear;
+	transition-duration: 50ms;
 }
 
 html {
@@ -26,8 +29,18 @@ select {
 	color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+input,
+input::placeholder {
+	color: inherit;
+}
+
 body {
-	color: rgb(255 255 255);
 	font-family: poppins;
 	height: 100vh;
 }
@@ -49,7 +62,7 @@ h3 {
 }
 
 @media (min-width: 768px) {
-	.h1 {
+	h1 {
 		font-size: 48px;
 	}
 }
@@ -61,3 +74,47 @@ h3 {
 }
 
 /* End of CSS resets */
+
+/* Start of app-container */
+
+#app-container {
+	height: 100vh;
+	
+}
+
+@media (min-width: 768px) {
+	#app-container {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1080px) {
+	#app-container {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/* End of app-container */
+
+
+
+/* Start of header */
+
+.header {
+	align-items: center;
+	backdrop-filter: blur;
+	border-bottom: 2px solid rgb(236 72 153);
+	left: 0;
+	padding-left: 1rem; /* 16px */
+	padding-right: 1rem; /* 16px */
+	position: fixed;
+	opacity: 50;
+	top: 0;
+	z-index: 50;
+}
+
+/* End of header */
