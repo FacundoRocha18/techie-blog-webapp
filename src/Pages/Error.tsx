@@ -1,5 +1,5 @@
 import { useRouteError } from 'react-router-dom'
-import { CustomLink } from 'components'
+import { CLink } from 'components'
 import { useThemeContext } from 'contexts/ThemeContext'
 
 export const ErrorPage = () => {
@@ -17,7 +17,7 @@ export const ErrorPage = () => {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
-      <CustomLink path='/' text='Volver al inicio' />
+      <CLink path='/' text='Volver al inicio' />
     </div>
   )
 }

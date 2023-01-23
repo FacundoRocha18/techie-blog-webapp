@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { CustomLinkProps } from 'types'
 
-export const CustomLink = ({ path, text, styles }: CustomLinkProps) => {
+export const CLink = ({ path, text, styles }: CustomLinkProps) => {
   const { themeName } = useThemeContext()
 
   return (
@@ -18,7 +18,7 @@ export const CustomLink = ({ path, text, styles }: CustomLinkProps) => {
   )
 }
 
-CustomLink.propTypes = {
+CLink.propTypes = {
   path: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   styles: PropTypes.string,

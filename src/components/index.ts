@@ -11,11 +11,11 @@ export * from './Templates/PostCard'
 export * from './Molecules/Header'
 export * from './Molecules/PostHeading'
 export * from './Molecules/PostBody'
-export * from './Atoms/Toggle'
+export * from './Molecules/CardBody'
 
 // Atoms
 export * from './Atoms/Button'
-export * from './Atoms/CustomLink'
+export * from './Atoms/Link'
 export * from './Atoms/Image'
 export * from './Atoms/Section'
 export * from './Atoms/Input'
