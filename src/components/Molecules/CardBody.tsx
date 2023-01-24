@@ -5,22 +5,23 @@ import { Link } from 'react-router-dom'
 import { IPost } from 'types'
 
 export const CardBody = ({ data }: { data: IPost }) => {
+
 	return (
 
-		<CContainer display='grid' columns={3} gap={16} rows={2}>
-			<CTitle alignTo='left' aria-rowspan={1} aria-colspan={3} fontSize={20} >
-				<Link className='' to={`post/${data.uuid}`}>
+		<CContainer className='card-body' columns={1} display='grid' gap={'16px 0px'} height='fit-content' padding={16} rows={2} >
+			<CTitle alignTo='left' aria-rowspan={1} aria-colspan={1} fontSize={20} fontWeight={500}>
+				<Link to={`post/${data.post_uuid}`}>
 					{data.title}
 				</Link>
 			</CTitle>
-			<h4 className='col-span-3 row-span-1 row-start-2 self-start'>
-				Autor: <span className='text-pink-500'>{data.authorName}</span>
+			<h4 className='col-span-1 row-span-1 row-start-2 self-start'>
+				Autor: <span className='text-pink-500'>{data.author_name}</span>
 			</h4>
 			<p className='hidden max-w-full col-span-3 row-span-3 row-start-3 tablet:inline desktop:inline'>
 				{data.content}
 			</p>
 			<CLink
-				path={`/post/${data.uuid}`}
+				path={`/post/${data.post_uuid}`}
 				text='Ver noticia'
 				styles='hidden col-span-3 row-span-1 row-start-6 tablet:flex desktop:flex'
 			/>

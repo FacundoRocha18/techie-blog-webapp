@@ -1,14 +1,16 @@
 import styled from 'styled-components'
+import { ICSection } from 'components/components.types'
 
-export const CSection = styled.section`
+export const CSection = styled('section')<ICSection>`
 	color: var(${props => props.color});
 	display: flex;
 	flex-direction: column;
+	gap: ${props => props.gap};
 	padding: 1rem; /* 16px */
-	min-height: 100%;
+	min-height: 100vh;
+	height: fit-content;
 	margin-left: auto;
   margin-right: auto;
-	margin-top: 6rem; /* 96px */
 	width: 100%;
 `
 

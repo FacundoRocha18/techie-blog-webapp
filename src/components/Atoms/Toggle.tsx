@@ -18,7 +18,7 @@ export const CToggle = () => {
 	const { theme, themeName, toggleTheme } = useThemeContext()
 
 	return (
-		<Toggle background={theme.card} border={theme.fontColor} theme={themeName} onClick={() => toggleTheme()}>
+		<Toggle background={theme.card} border={theme.color} theme={themeName} onClick={() => toggleTheme()}>
 			<CIcon className='material-icons'>
 				{themeName === 'light' ? 'dark_mode' : 'light_mode'}
 			</CIcon>

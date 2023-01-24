@@ -1,3 +1,5 @@
+import { IPost } from "types"
+
 export const fetchPosts = async () => {
   const url = 'http://localhost:8000/api/posts'
 
@@ -10,7 +12,7 @@ export const fetchPosts = async () => {
 
   const response = await fetch(url, params)
 
-  const { data } = await response.json()
+  const { data } = await response.json();
 
   return data
 }

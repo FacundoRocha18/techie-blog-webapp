@@ -6,20 +6,12 @@ import { CImage, CContainer, CardBody } from 'components'
 export const PostCard = ({ data }: { data: IPost }) => {
 	const { theme, themeName } = useThemeContext()
 
-	{/* <div
-		className={`${theme.card} ${theme.fontColor} ${themeName === 'light' ? 'border-2' : 'border-0'
-			}`}
-		id='card-container'
-	>
-		
-	</div> */}
 	return (
-		<CContainer background={theme.card} display='grid' height='50%' gap='16' rows='2'>
+		<CContainer background={theme.card} color={theme.color} display='grid' height='fit-content' gap={16} rounded={4} rows={2} shadow={true} size='auto'>
 			<CImage
 				src='https://www.amd.com/system/files/styles/600px/private/2022-11/1761310-amd-ryzen-9-7000-series-PIB-angle-1260x709.png?itok=_NVpbZqF'
 				alt='AMD Ryzen 7000 series'
-				height='h-20'
-				width='w-20'
+				height='200px'
 			/>
 			<CardBody data={data} />
 		</CContainer>

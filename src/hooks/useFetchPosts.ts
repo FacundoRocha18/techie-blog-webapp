@@ -10,7 +10,7 @@ export const useFetchPosts = () => {
 			.then((data) => {
 				if (!data) throw new Error('No se pudo recuperar los datos')
 				setPosts(data)
-				setTimeout(() => setLoading(false), 2000)
+				setTimeout(() => setLoading(false), 1000)
 			})
 			.catch((err) => {
 				setTimeout(() => {

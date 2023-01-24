@@ -9,7 +9,7 @@ export const Root = () => {
 
 	return (
 		<div className='App'>
-			<CContainer align='stretch' background={theme.background} color={theme.color} display='flex' gap='0' id='app-container'>
+			<CContainer background={theme.background} color={theme.color} id='app-container'>
 				<Header />
 				<AuthProvider>
 					<PostsProvider>

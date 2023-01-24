@@ -30,15 +30,13 @@ export interface IComment {
 }
 
 export interface IPost {
-  uuid: string
+  post_uuid: string
   title: string
   theme: string
-  authorUuid: number
-  authorName: string
+  author_uuid: number
+  author_name: string
   content: string
-  postedDate: string
-  reactions: IReaction[] | null[]
-  comments: IComment[] | null[]
+  created_at: string
 }
 
 export interface ChildrenProps {

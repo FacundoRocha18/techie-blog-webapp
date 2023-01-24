@@ -5,17 +5,20 @@ import { ThemeType, IThemeContext, ChildrenProps } from 'types'
 export interface Theme {
   background: string
 	border: string
+  color: string
+	header: string
 	placeholders: string
   card: string
-  fontColor: string
 }
 
 enum BackgroundColors {
   LIGHTGRAY = '--bg-gray-100',
+  LIGHTGRAYTRANSLUCID = '--bg-gray-100-translucid',
   GRAY = '--bg-gray-300',
 	DARKGRAY = '--bg-gray-900',
   DARKZINC = '--bg-zinc-700',
   DARKERZINC = '--bg-zinc-800',
+  DARKERZINCTRANSLUCID = '--bg-zinc-800-translucid',
 	MEDIUMSLATE = '--bg-slate-400',
 }
 
@@ -33,16 +36,18 @@ const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: BackgroundColors.LIGHTGRAY,
 		border: BorderColors.DARKGREY,
-		placeholders: BackgroundColors.MEDIUMSLATE,
     card: BackgroundColors.GRAY,
-    fontColor: TextColors.DARKGREY,
+    color: TextColors.DARKGREY,
+		header: BackgroundColors.LIGHTGRAYTRANSLUCID,
+		placeholders: BackgroundColors.MEDIUMSLATE,
   },
   dark: {
     background: BackgroundColors.DARKERZINC,
 		border: BorderColors.LIGHTGREY,
-		placeholders: BackgroundColors.DARKGRAY,
     card: BackgroundColors.DARKZINC,
-    fontColor: TextColors.LIGHTGREY,
+    color: TextColors.LIGHTGREY,
+    header: BackgroundColors.DARKERZINCTRANSLUCID,
+		placeholders: BackgroundColors.DARKGRAY,
   },
 }
 

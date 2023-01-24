@@ -1,7 +1,7 @@
 import { usePostsContext } from 'contexts/PostsContext'
 import { PostCard } from '../components/Templates/PostCard'
-import { EmptyCard } from 'components/Templates/EmptyCard'
-import { CContainer, CSection } from 'components'
+import { CardTemplate } from 'components/Templates/CardTemplate'
+import { CContainer, CSection, CTitle } from 'components'
 import { useThemeContext } from 'contexts/ThemeContext'
 
 export const News = () => {
@@ -9,19 +9,18 @@ export const News = () => {
 	const { theme } = useThemeContext()
 
 	return (
-		<CSection color={theme.fontColor}>
-			<h2 className='mb-4 text-left text-smTitle'>Noticias recientes</h2>
-			<div className='grid w-full grid-cols-1 items-center gap-4'>
-
-			</div>
-			<CContainer align='default' columns='1' display='grid' rows={posts.length.toString()} gap='16'>
+		<CSection color={theme.fontColor} gap='16px 0px'>
+			<CTitle alignTo='left' fontSize={25} fontWeight={600}>
+				Noticias recientes
+			</CTitle>
+			<CContainer align='default' columns={1} display='grid' height='fit-content' rows={posts.length} gap='16px 0px'>
 				{
 					loading
 						?
-						<EmptyCard />
+						<CardTemplate />
 						:
 						posts.map((post) => (
-							<PostCard key={post.uuid} data={post} />
+							<PostCard key={post.post_uuid} data={post} />
 						))
 				}
 			</CContainer>

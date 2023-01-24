@@ -4,7 +4,7 @@ export * from '../Pages/Register'
 export * from '../Pages/News'
 
 // Templates
-export * from './Templates/EmptyCard'
+export * from './Templates/CardTemplate'
 export * from './Templates/PostCard'
 
 // Molecules
