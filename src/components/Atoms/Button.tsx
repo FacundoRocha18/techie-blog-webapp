@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CButton = styled.button`
+export const CButton = styled('button')`
 	align-items: center;
 	background-color: rgb(236 72 153);
 	border: 2px solid ${props => props.color};

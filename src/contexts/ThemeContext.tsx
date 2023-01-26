@@ -12,13 +12,15 @@ export interface Theme {
 }
 
 enum BackgroundColors {
+	BLACK = '--bg-black',
+	BLACKTRANSLUCENT = '--black-translucent',
   LIGHTGRAY = '--bg-gray-100',
-  LIGHTGRAYTRANSLUCID = '--bg-gray-100-translucid',
+  LIGHTGRAYTRANSLUCENT = '--bg-gray-translucent',
   GRAY = '--bg-gray-300',
 	DARKGRAY = '--bg-gray-900',
   DARKZINC = '--bg-zinc-700',
   DARKERZINC = '--bg-zinc-800',
-  DARKERZINCTRANSLUCID = '--bg-zinc-800-translucid',
+  DARKERZINCTRANSLUCENT = '--zinc-800-translucid',
 	MEDIUMSLATE = '--bg-slate-400',
 }
 
@@ -36,17 +38,17 @@ const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: BackgroundColors.LIGHTGRAY,
 		border: BorderColors.DARKGREY,
-    card: BackgroundColors.GRAY,
+    card: BackgroundColors.LIGHTGRAY,
     color: TextColors.DARKGREY,
-		header: BackgroundColors.LIGHTGRAYTRANSLUCID,
+		header: BackgroundColors.LIGHTGRAYTRANSLUCENT,
 		placeholders: BackgroundColors.MEDIUMSLATE,
   },
   dark: {
-    background: BackgroundColors.DARKERZINC,
+    background: BackgroundColors.BLACK,
 		border: BorderColors.LIGHTGREY,
     card: BackgroundColors.DARKZINC,
     color: TextColors.LIGHTGREY,
-    header: BackgroundColors.DARKERZINCTRANSLUCID,
+    header: BackgroundColors.DARKERZINCTRANSLUCENT,
 		placeholders: BackgroundColors.DARKGRAY,
   },
 }

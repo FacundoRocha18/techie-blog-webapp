@@ -87,6 +87,7 @@ h3 {
 /* Start of app-container */
 
 #app-container {
+	background: -webkit-gradient(linear, left top, left bottom, from(#1D1D1F), to(0%, #fff));
 	min-height: 100vh;
 	height: fit-content;
 }
@@ -113,9 +114,11 @@ h3 {
 
 #header {
 	align-items: center;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	background-color: var(--bg-black-translucid);
 	border: 0;
-	border-bottom: 2px solid rgb(236 72 153);
+	border-bottom: 1px solid rgb(236 72 153);
 	left: 0;
 	padding-left: 1rem;
 	/* 16px */
@@ -126,7 +129,61 @@ h3 {
 	z-index: 50;
 }
 
+.menu-container {
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	transition: all .3s ease;
+}
+
+.menu-button.active span:first-child {
+	transform: rotateZ(-45deg) scaleX(1) translate(-4px, 4px);
+	transition: all .3s ease;
+}
+
+.menu-button.active span:last-child {
+	transform: rotateZ(45deg) scaleX(1) translate(-4px, -4px);
+	transition: all .3s ease;
+}
+
+.menu-button.inactive span:first-child {
+	transform: rotateZ(0deg) scaleX(1) translate(0px, 0px);
+	transition: all .3s ease;
+}
+
+.menu-button.inactive span:last-child {
+	transform: rotateZ(0deg) scaleX(1) translate(0px, 0px);
+	transition: all .3s ease;
+}
+
+.menu {
+	overflow: hidden;
+}
+
 /* End of header */
+
+/* Start of overlay */
+
+#overlay {
+	background-color: var(--bg-black-translucid);
+	height: 0px;
+	position: fixed;
+	top: 48px;
+	overflow: hidden;
+	width: 100vw;
+	transition: height .5s ease;
+	z-index: 100;
+}
+
+#sidebar {
+	background-color: red;
+	height: 100%;
+}
+
+#overlay.active {
+	height: 100vh;
+}
+
+/* End of overlay */
 
 /* Start of card */
 
@@ -172,3 +229,4 @@ h3 {
 .animate-pulse {
 	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
