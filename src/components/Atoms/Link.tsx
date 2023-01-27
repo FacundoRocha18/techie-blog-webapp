@@ -1,25 +1,13 @@
-import { useThemeContext } from 'contexts/ThemeContext'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { CustomLinkProps } from 'types'
+import styled from 'styled-components'
 
-export const CLink = ({ path, text, styles }: CustomLinkProps) => {
-  const { themeName } = useThemeContext()
-
-  return (
-    <Link
-      className={`bg-pink-500 hover:bg-pink-600 ${
-        themeName === 'light' ? 'border-2' : 'border-0'
-      } flex w-full items-center justify-center rounded-sm border-solid border-gray-800 p-2 text-center font-medium transition-colors duration-150 ease-linear ${styles}`}
-      to={path}
-    >
-      <p>{text}</p>
-    </Link>
-  )
-}
-
-CLink.propTypes = {
-  path: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  styles: PropTypes.string,
-}
+export const CLink = styled(Link)`
+	align-items: center;
+	background-color: rgb(236 72 153);
+	border: 2px solid var(--black);
+	border-radius: 2px;
+	display: flex;
+	font-weight: 500;
+	justify-content: center;
+	padding: 8px;
+`

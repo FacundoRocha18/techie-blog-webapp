@@ -6,9 +6,10 @@ export interface Theme {
   background: string
 	border: string
   color: string
+  card: string
 	header: string
 	placeholders: string
-  card: string
+	translucent: string
 }
 
 enum BackgroundColors {
@@ -22,6 +23,7 @@ enum BackgroundColors {
   DARKERZINC = '--bg-zinc-800',
   DARKERZINCTRANSLUCENT = '--zinc-800-translucid',
 	MEDIUMSLATE = '--bg-slate-400',
+	TRANSLUCENT = '--bg-translucent'
 }
 
 enum TextColors {
@@ -42,6 +44,7 @@ const THEMES: Record<ThemeType, Theme> = {
     color: TextColors.DARKGREY,
 		header: BackgroundColors.LIGHTGRAYTRANSLUCENT,
 		placeholders: BackgroundColors.MEDIUMSLATE,
+		translucent: BackgroundColors.TRANSLUCENT
   },
   dark: {
     background: BackgroundColors.BLACK,
@@ -50,6 +53,7 @@ const THEMES: Record<ThemeType, Theme> = {
     color: TextColors.LIGHTGREY,
     header: BackgroundColors.DARKERZINCTRANSLUCENT,
 		placeholders: BackgroundColors.DARKGRAY,
+		translucent: BackgroundColors.TRANSLUCENT
   },
 }
 

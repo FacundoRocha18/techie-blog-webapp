@@ -8,8 +8,8 @@ export const CardBody = ({ data }: { data: IPost }) => {
 
 	return (
 
-		<CContainer className='card-body' columns={1} display='grid' gap={'16px 0px'} height='fit-content' padding={16} rows={2} >
-			<CTitle alignTo='left' aria-rowspan={1} aria-colspan={1} fontSize={20} fontWeight={500}>
+		<CContainer className='card-body'>
+			<CTitle aria-rowspan={1} aria-colspan={1} fontSize={20} fontWeight={500}>
 				<Link to={`post/${data.post_uuid}`}>
 					{data.title}
 				</Link>
@@ -20,11 +20,9 @@ export const CardBody = ({ data }: { data: IPost }) => {
 			<p className='hidden max-w-full col-span-3 row-span-3 row-start-3 tablet:inline desktop:inline'>
 				{data.content}
 			</p>
-			<CLink
-				path={`/post/${data.post_uuid}`}
-				text='Ver noticia'
-				styles='hidden col-span-3 row-span-1 row-start-6 tablet:flex desktop:flex'
-			/>
+			<CLink to={`/post/${data.post_uuid}`} className='card-btn'>
+				Ver noticia
+			</CLink>
 		</CContainer>
 	)
 }
