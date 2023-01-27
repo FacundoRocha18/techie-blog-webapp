@@ -195,7 +195,7 @@ h3 {
 }
 
 @media (min-width: 1080px) {
-	.menu-button {
+	.menu-button-container {
 		display: none;
 	}
 
@@ -203,6 +203,7 @@ h3 {
 		align-items: center;
 		display: flex;
 		gap: 8px;
+		width: fit-content;
 	}
 
 	.menu li {

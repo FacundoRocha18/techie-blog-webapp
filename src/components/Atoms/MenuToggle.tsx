@@ -19,7 +19,7 @@ export const MenuToggle = () => {
 
 	return (
 		<>
-			<CContainer>
+			<CContainer className="menu-button-container">
 				<button className={`menu-button ${isVisible ? 'active' : 'inactive'}`}
 					onClick={() => setIsVisible(!isVisible)}>
 					<CSpan color={theme.color} />
