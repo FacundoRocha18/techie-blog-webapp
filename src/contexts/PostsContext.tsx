@@ -1,5 +1,4 @@
-import { createContextCustom } from 'hooks'
-import { useFetchPosts } from 'hooks'
+import { createContextCustom, useFetchPosts } from 'hooks'
 import { ChildrenProps, IPostsContext } from 'types'
 
 export const [usePostsContext, ContextProvider] = createContextCustom<IPostsContext>()

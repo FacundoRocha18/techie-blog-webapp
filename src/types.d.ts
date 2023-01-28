@@ -3,7 +3,7 @@ import React from 'react'
 export interface IThemeContext {
   theme: Theme
   themeName: string
-  toggleTheme: Function
+  toggleTheme: VoidFunction
 }
 
 interface IPostsContext {
@@ -48,7 +48,7 @@ export interface IPost {
   post_uuid: string
   title: string
   theme: string
-  author_uuid: number
+  author_uuid: string
   author_name: string
   content: string
   created_at: string

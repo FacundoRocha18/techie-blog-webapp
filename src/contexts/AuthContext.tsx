@@ -1,5 +1,5 @@
 import { createContextCustom } from 'hooks'
-import { RegisterUser } from 'services/RegisterUser'
+import { RegisterUser } from 'services/TechieAPI/RegisterUser'
 import { ChildrenProps } from 'types'
 
 interface IUserContext {

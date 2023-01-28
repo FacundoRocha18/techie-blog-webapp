@@ -1,7 +1,8 @@
 import { FormEvent, useState } from 'react'
 import { useThemeContext } from 'contexts/ThemeContext'
-import { RegisterUser } from 'services/RegisterUser'
+import { RegisterUser } from 'services/TechieAPI/RegisterUser'
 import { CButton, CSection, CInput, CLabel, CFieldset, CContainer, CForm, StyledTitle } from 'components'
+import { RegisterUserSupabaseAPI } from 'services/Supabase/RegisterUserFromSupabase'
 
 export const Register = () => {
 	const { theme } = useThemeContext()
@@ -13,13 +14,13 @@ export const Register = () => {
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault()
 
-		RegisterUser(name, email, password)
+		RegisterUserSupabaseAPI(name, email, password)
 	}
 
 	return (
 		<CSection>
-			<CContainer color={theme.fontColor} display='flex' direction='column' gap='32'>
-				<StyledTitle alignTo='left'>Cree una nueva cuenta</StyledTitle>
+			<CContainer color={theme.color}>
+				<StyledTitle>Cree una nueva cuenta</StyledTitle>
 				<CForm onSubmit={(e) => handleSubmit(e)}>
 					<CFieldset>
 						<CLabel htmlFor="name-input">Tu nombre:</CLabel>

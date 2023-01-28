@@ -1,4 +1,4 @@
-import { IPost } from "types"
+import { IPost } from 'types'
 
 export const fetchPosts = async () => {
   const url = 'http://localhost:8000/api/posts'
