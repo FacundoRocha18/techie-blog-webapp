@@ -11,7 +11,7 @@ export const Root = () => {
 	return (
 		<div className='App'>
 			<MenuProvider>
-				<CContainer background={theme.background} color={theme.color} id='app-container'>
+				<CContainer theme={theme} color={theme.color} id='app-container'>
 					<Header />
 					<AuthProvider>
 						<PostsProvider>
