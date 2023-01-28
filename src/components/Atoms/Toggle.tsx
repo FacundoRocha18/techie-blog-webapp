@@ -1,27 +1,27 @@
 import { useThemeContext } from 'contexts/ThemeContext'
 import styled from 'styled-components'
-import { CIcon } from 'components'
-import { ICToggle } from '../components.types'
+import { StyledIcon } from 'components'
+import { IStyledComponent } from '../components.types'
+import { ThemeProps } from 'types'
 
-
-const Toggle = styled('button')<ICToggle>`
+const Switch = styled('button') <IStyledComponent>`
 	align-items: center;
-	background-color: var(${props => props.background});
-	border: solid 2px var(${props => props.border});
+	background-color: var(${({ theme }: ThemeProps) => theme.card});
+	border: solid 2px var(${({ theme }: ThemeProps) => theme.border});
 	border-radius: 9999px;
 	display: flex;
-	justify-content: ${props => props.theme === 'light' ? 'flex-end' : 'flex-start'};
-	width: 4rem; /* 64px */
+	justify-content: ${({ theme }: ThemeProps) => theme.name === 'light' ? 'flex-end' : 'flex-start'};
+	width: 64px;
 `
 
 export const CToggle = () => {
 	const { theme, themeName, toggleTheme } = useThemeContext()
 
 	return (
-		<Toggle background={theme.card} border={theme.color} theme={themeName} onClick={() => toggleTheme()}>
-			<CIcon className='material-icons'>
+		<Switch theme={theme} onClick={() => toggleTheme()}>
+			<StyledIcon className='material-icons'>
 				{themeName === 'light' ? 'dark_mode' : 'light_mode'}
-			</CIcon>
-		</Toggle>
+			</StyledIcon>
+		</Switch>
 	)
 }

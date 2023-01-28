@@ -11,4 +11,9 @@ export const CButton = styled('button')`
 	grid-column: span 4 / span 4;
 	padding: 8px;
 	text-align: center;
+	transition: background-color .3s ease;
+
+	&:hover {
+		background-color: rgb(219 39 119);
+	}
 	`

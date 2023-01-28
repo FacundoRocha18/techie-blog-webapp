@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { useThemeContext } from 'contexts/ThemeContext'
 import { RegisterUser } from 'services/RegisterUser'
-import { CButton, CSection, CInput, CLabel, CFieldset, CContainer, CForm, CTitle } from 'components'
+import { CButton, CSection, CInput, CLabel, CFieldset, CContainer, CForm, StyledTitle } from 'components'
 
 export const Register = () => {
 	const { theme } = useThemeContext()
@@ -19,7 +19,7 @@ export const Register = () => {
 	return (
 		<CSection>
 			<CContainer color={theme.fontColor} display='flex' direction='column' gap='32'>
-				<CTitle alignTo='left'>Cree una nueva cuenta</CTitle>
+				<StyledTitle alignTo='left'>Cree una nueva cuenta</StyledTitle>
 				<CForm onSubmit={(e) => handleSubmit(e)}>
 					<CFieldset>
 						<CLabel htmlFor="name-input">Tu nombre:</CLabel>

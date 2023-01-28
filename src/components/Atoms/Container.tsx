@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { ICContainer } from '../components.types'
+import { IStyledComponent } from '../components.types'
 
-export const CContainer = styled('div') <ICContainer>`
-	background-color: var(${props => props.background});
+export const CContainer = styled('div') <IStyledComponent>`
+	background-color: var(${({ theme }) => theme.background});
 	color: var(${props => props.color});
 `

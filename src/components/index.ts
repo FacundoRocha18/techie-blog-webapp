@@ -18,7 +18,7 @@ export * from './Molecules/Navigation'
 
 // Atoms
 export * from './Atoms/Button'
-export * from './Atoms/Link'
+export * from './Atoms/Links'
 export * from './Atoms/Image'
 export * from './Atoms/Section'
 export * from './Atoms/Input'
@@ -28,6 +28,6 @@ export * from './Atoms/Fieldset'
 export * from './Atoms/Container'
 export * from './Atoms/Form'
 export * from './Atoms/Toggle'
-export * from './Atoms/MenuToggle'
+export * from './Atoms/MenuButton'
 export * from './Atoms/Icon'
 

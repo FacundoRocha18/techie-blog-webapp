@@ -11,7 +11,22 @@ interface IPostsContext {
   loading: boolean
 }
 
+export interface Theme {
+  background: string
+	border: string
+  color: string
+  card: string
+	header: string
+	placeholders: string
+	translucent: string
+	name: ThemeType
+}
+
 export type ThemeType = 'light' | 'dark'
+
+export interface ThemeProps {
+	theme: Theme
+} 
 
 export interface IReaction {
   reactionId: number

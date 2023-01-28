@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 import { useThemeContext } from 'contexts/ThemeContext'
 import { PostsProvider } from 'contexts/PostsContext'
 import { AuthProvider } from 'contexts/AuthContext'
-import { SidebarProvider } from 'contexts/SidebarContext'
+import { MenuProvider } from 'contexts/MenuContext'
 import { CContainer, Header } from 'components'
 
 export const Root = () => {
@@ -10,7 +10,7 @@ export const Root = () => {
 
 	return (
 		<div className='App'>
-			<SidebarProvider>
+			<MenuProvider>
 				<CContainer background={theme.background} color={theme.color} id='app-container'>
 					<Header />
 					<AuthProvider>
@@ -19,7 +19,7 @@ export const Root = () => {
 						</PostsProvider>
 					</AuthProvider>
 				</CContainer>
-			</SidebarProvider>
+			</MenuProvider>
 		</div>
 	)
 }

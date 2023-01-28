@@ -1,20 +1,6 @@
-export interface ICToggle {
-	background: string
-	border: string
-	theme: string
-}
+import { Theme } from "types"
 
-export interface ICContainer {
+export interface IStyledComponent {
 	background?: string
-	color?: string
-}
-
-export interface ICTitle {
-	background?: string
-	fontSize: number
-	fontWeight: number
-}
-
-export interface ICSection {
-	gap?: string
+	theme?: string
 }

@@ -1,16 +1,6 @@
 import React, { useState } from 'react'
 import { createContextCustom, useLocalStorage } from 'hooks'
-import { ThemeType, IThemeContext, ChildrenProps } from 'types'
-
-export interface Theme {
-  background: string
-	border: string
-  color: string
-  card: string
-	header: string
-	placeholders: string
-	translucent: string
-}
+import { Theme, ThemeType, IThemeContext, ChildrenProps } from 'types'
 
 enum BackgroundColors {
 	BLACK = '--bg-black',
@@ -36,6 +26,11 @@ enum BorderColors {
   DARKGREY = '--border-gray-900',
 }
 
+enum ThemeNames {
+	LIGHT = 'light',
+	DARK = 'dark',
+}
+
 const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: BackgroundColors.LIGHTGRAY,
@@ -44,7 +39,8 @@ const THEMES: Record<ThemeType, Theme> = {
     color: TextColors.DARKGREY,
 		header: BackgroundColors.LIGHTGRAYTRANSLUCENT,
 		placeholders: BackgroundColors.MEDIUMSLATE,
-		translucent: BackgroundColors.TRANSLUCENT
+		translucent: BackgroundColors.TRANSLUCENT,
+		name: ThemeNames.LIGHT,
   },
   dark: {
     background: BackgroundColors.BLACK,
@@ -53,7 +49,8 @@ const THEMES: Record<ThemeType, Theme> = {
     color: TextColors.LIGHTGREY,
     header: BackgroundColors.DARKERZINCTRANSLUCENT,
 		placeholders: BackgroundColors.DARKGRAY,
-		translucent: BackgroundColors.TRANSLUCENT
+		translucent: BackgroundColors.TRANSLUCENT,
+		name: ThemeNames.DARK
   },
 }
 

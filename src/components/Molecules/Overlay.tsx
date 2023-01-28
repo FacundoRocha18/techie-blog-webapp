@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useSidebarContext } from 'contexts/SidebarContext'
+import { useMenuContext } from 'contexts/MenuContext'
 import { CContainer } from 'components/Atoms/Container'
 import { useThemeContext } from 'contexts/ThemeContext'
 import { ChildrenProps } from 'types'
 
 export const Overlay = ({ children }: ChildrenProps) => {
-	const { isVisible, setIsVisible } = useSidebarContext()
+	const { isVisible, setIsVisible } = useMenuContext()
 	const { theme } = useThemeContext()
 
 	return (

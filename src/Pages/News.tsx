@@ -1,5 +1,5 @@
 import { usePostsContext } from 'contexts/PostsContext'
-import { CContainer, CSection, CTitle, CardTemplate, PostCard } from 'components'
+import { CContainer, CSection, StyledSubtitle, CardTemplate, PostCard } from 'components'
 import { useThemeContext } from 'contexts/ThemeContext'
 
 export const News = () => {
@@ -7,10 +7,10 @@ export const News = () => {
 	const { theme } = useThemeContext()
 
 	return (
-		<CSection color={theme.fontColor} gap='16px 0px'>
-			<CTitle fontSize={25} fontWeight={600}>
+		<CSection className='news-section' theme={theme}>
+			<StyledSubtitle >
 				Noticias recientes
-			</CTitle>
+			</StyledSubtitle>
 			<CContainer className='news-container' >
 				{
 					loading
