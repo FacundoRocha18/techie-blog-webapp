@@ -1,2 +1,2 @@
 export * from 'routes/Root'
-export * from 'routes/ErrorPage'
+export * from 'Pages/Error'

@@ -1,36 +1,34 @@
 @tailwind base;
 
-@layer base {
-  body {
-    @apply h-screen w-screen font-poppins text-white;
-  }
-
-  #home-container,
-	#post-container {
-    @apply h-full min-h-screen w-full p-4 mt-24 transition-colors duration-150 ease-linear;
-    @apply tablet:flex tablet:items-center tablet:justify-center tablet:p-8;
-    @apply desktop:flex desktop:items-center desktop:justify-center desktop:p-16;
-  }
-
-  h1 {
-    @apply text-smTitle font-semibold;
-    @apply tablet:text-subtitle;
-    @apply desktop:text-title;
-  }
-
-  h2 {
-    @apply text-smSubtitle font-semibold;
-  }
-
-	h3 {
-		@apply text-lg font-medium;
-	}
-
-}
-
 @tailwind components;
 
 @layer components {
+  
+  #home-container,
+  #post-container {
+    @apply mx-auto mt-24 h-full min-h-screen w-100% p-4 transition-colors duration-150 ease-linear;
+    @apply tablet:flex tablet:justify-center tablet:p-8;
+    @apply desktop:flex desktop:w-60% desktop:justify-center desktop:p-8;
+  }
+
+  #news-container {
+    @apply desktop:w-60%;
+  }
+
+  #card-container,
+  #empty-card {
+    @apply grid grid-flow-col grid-cols-4 items-center gap-4 h-fit w-full justify-around rounded border-solid border-gray-800 p-2 text-left;
+    @apply tablet:gap-8 tablet:p-4 tablet:grid-cols-2;
+  }
+
+	#card-container {
+		@apply gap-0;
+	}
+
+  #card-container img {
+    @apply tablet:h-60 tablet:w-96;
+    @apply desktop:h-60 desktop:w-96;
+  }
 }
 
 @tailwind utilities;

@@ -1,17 +1,25 @@
 import { Outlet } from 'react-router-dom'
-import { ThemeProvider } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/ThemeContext'
 import { PostsProvider } from 'contexts/PostsContext'
-import { Header } from 'components'
+import { AuthProvider } from 'contexts/AuthContext'
+import { MenuProvider } from 'contexts/MenuContext'
+import { CContainer, Header } from 'components'
 
 export const Root = () => {
+	const { theme } = useThemeContext()
+
 	return (
 		<div className='App'>
-			<ThemeProvider>
-				<Header />
-				<PostsProvider>
-					<Outlet />
-				</PostsProvider>
-			</ThemeProvider>
+			<MenuProvider>
+				<CContainer background={theme.background} color={theme.color} id='app-container'>
+					<Header />
+					<AuthProvider>
+						<PostsProvider>
+							<Outlet />
+						</PostsProvider>
+					</AuthProvider>
+				</CContainer>
+			</MenuProvider>
 		</div>
 	)
 }
