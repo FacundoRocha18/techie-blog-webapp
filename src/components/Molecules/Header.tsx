@@ -34,7 +34,7 @@ export const Header = () => {
 		<>
 			<StyledHeader background={isVisible ? theme.header : theme.translucent}>
 				<StyledTitle className='header-title'>
-					<Link to={'/'} onClick={() => setIsVisible(!isVisible)}>Techie blog</Link>
+					<Link to={'/'} onClick={() => setIsVisible(false)}>Techie blog</Link>
 				</StyledTitle>
 				<Navigation />
 				<MenuToggle />

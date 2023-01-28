@@ -83,18 +83,18 @@ const StyledNav = styled('nav') <IStyledComponent>`
 
 export const Navigation = ({ className }: { className?: string }) => {
 	const { theme } = useThemeContext()
-	const { isVisible, setIsVisible } = useMenuContext()
+	const { setIsVisible } = useMenuContext()
 
 	return (
 		<>
 			<StyledNav theme={theme}>
 				<StyledUList>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(!isVisible)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(!isVisible)}>Noticias</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(!isVisible)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(!isVisible)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(!isVisible)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledNavLink to={'register'} onClick={() => setIsVisible(!isVisible)}>Crear una cuenta</StyledNavLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledNavLink to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledNavLink></StyledListItem>
 				</StyledUList>
 			</StyledNav>
 		</>
