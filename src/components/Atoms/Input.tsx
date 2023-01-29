@@ -1,9 +1,11 @@
 import styled from 'styled-components'
+import { IStyledComponent } from 'components/components.types'
+import { ThemeProps } from 'types'
 
-export const CInput = styled.input`
-border: 2px solid ${props => props.color};
+export const StyledInput = styled('input') <IStyledComponent>`
+border: 2px solid var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--black' : theme.translucent});
 border-radius: 2px;
-color: ${props => props.color};
+color: var(${({ theme }: ThemeProps) => theme.color});
 grid-column: span 4 / span 4;
 padding: 8px;
 `

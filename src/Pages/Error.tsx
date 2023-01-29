@@ -1,6 +1,6 @@
 import { useRouteError } from 'react-router-dom'
 import { StyledPrimLink } from 'components'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
 export const ErrorPage = () => {
   const error: any = useRouteError()

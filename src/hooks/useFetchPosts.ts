@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { fetchPosts } from 'services/TechieAPI/FetchPosts'
-import { fetchPostsFromSupabase } from 'services/Supabase/FetchPostsFromSupabase'
+import { fetchPostsFromSupabase } from 'services/SupabaseAPI/FetchPostsFromSupabase'
 
 export const useFetchPosts = () => {
 	const [posts, setPosts] = useState([])
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
-		fetchPostsFromSupabase()
+		fetchPosts()
 			.then((data) => {
 				if (!data) throw new Error('No se pudo recuperar los datos')
 				setPosts(data)

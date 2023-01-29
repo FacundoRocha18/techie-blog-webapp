@@ -3,7 +3,7 @@ import { usePostsContext } from 'contexts/PostsContext'
 import { usePost } from 'hooks'
 import { IPost } from 'types'
 import { PostHeading, PostBody } from 'components'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
 export const Post = () => {
 	const { id } = useParams()

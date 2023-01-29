@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { StyledTitle, MenuToggle, Overlay, Menu, Navigation, CToggle, StyledPrimLink } from 'components'
 import { useMenuContext } from 'contexts/MenuContext'
-import { useThemeContext } from 'contexts/ThemeContext'
-import { Theme } from 'types'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { IStyledComponent } from 'components/components.types'
 
 export const StyledHeader = styled('header') <IStyledComponent>`
@@ -27,7 +26,7 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 `
 
 export const Header = () => {
-	const { theme }: { theme: Theme } = useThemeContext()
+	const { theme } = useThemeContext()
 	const { isVisible, setIsVisible } = useMenuContext()
 
 	return (

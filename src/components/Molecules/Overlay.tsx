@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useMenuContext } from 'contexts/MenuContext'
-import { CContainer } from 'components/Atoms/Container'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { StyledContainer } from 'components/Atoms/Container'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { ChildrenProps } from 'types'
 
 export const Overlay = ({ children }: ChildrenProps) => {
@@ -11,11 +11,11 @@ export const Overlay = ({ children }: ChildrenProps) => {
 
 	return (
 		<>
-			<CContainer id='overlay' className={`${isVisible ? 'active' : 'inactive'}`}>
+			<StyledContainer id='overlay' className={`${isVisible ? 'active' : 'inactive'}`}>
 				{
 					children
 				}
-			</CContainer>
+			</StyledContainer>
 		</>
 	)
 }

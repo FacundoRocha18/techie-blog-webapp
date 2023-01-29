@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { IPost, ThemeProps } from 'types'
-import { useThemeContext } from 'contexts/ThemeContext'
-import { CImage, CContainer, CardBody } from 'components'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
+import { CImage, StyledContainer, CardBody } from 'components'
 import styled from 'styled-components'
 
 const StyledCard = styled('article')`

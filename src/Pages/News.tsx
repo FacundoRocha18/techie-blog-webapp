@@ -1,17 +1,17 @@
+import { StyledContainer, StyledSection, CardTemplate, PostCard, StyledSubtitle } from 'components'
 import { usePostsContext } from 'contexts/PostsContext'
-import { CContainer, CSection, StyledSubtitle, CardTemplate, PostCard } from 'components'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
 export const News = () => {
 	const { posts, loading } = usePostsContext()
 	const { theme } = useThemeContext()
 
 	return (
-		<CSection className='news-section' theme={theme}>
-			<StyledSubtitle >
+		<StyledSection className='news-section' theme={theme}>
+			<StyledSubtitle>
 				Noticias recientes
 			</StyledSubtitle>
-			<CContainer className='news-container' >
+			<StyledContainer className='news-container' >
 				{
 					loading
 						?
@@ -21,9 +21,7 @@ export const News = () => {
 							<PostCard key={post.post_uuid} data={post} />
 						))
 				}
-			</CContainer>
-		</CSection>
+			</StyledContainer>
+		</StyledSection>
 	)
 }
-
-News.propTypes = {}
