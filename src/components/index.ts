@@ -4,7 +4,7 @@ export * from '../Pages/Register'
 export * from '../Pages/News'
 
 // Templates
-export * from './Templates/CardTemplate'
+export * from './Templates/CardLoader'
 export * from './Templates/PostCard'
 
 // Molecules
@@ -30,4 +30,6 @@ export * from './Atoms/Form'
 export * from './Atoms/Toggle'
 export * from './Atoms/MenuButton'
 export * from './Atoms/Icon'
+export * from './Atoms/Article'
+
 

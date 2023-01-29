@@ -11,5 +11,11 @@ export const StyledSection = styled('section') <IStyledComponent>`
 	min-height: 100vh;
 	margin-left: auto;
   margin-right: auto;
+
+	@media (min-width: 1080px) {
+  & {
+    width: 60%;
+  }
+}
 `
 

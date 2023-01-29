@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { usePostsContext } from 'contexts/PostsContext'
 import { usePost } from 'hooks'
 import { IPost } from 'types'
-import { PostHeading, PostBody } from 'components'
+import { PostHeading, PostBody, StyledArticle } from 'components'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
 export const Post = () => {
@@ -13,11 +13,9 @@ export const Post = () => {
 	const post: IPost = usePost(id, posts)
 
 	return (
-		<article className={`border-x-0 border-solid border-pink-500`} id='post-container'>
-			<div className='flex flex-col items-center gap-20 w-fit'>
-				<PostHeading post={post} />
-				<PostBody post={post} />
-			</div>
-		</article>
+		<StyledArticle>
+			<PostHeading post={post} />
+			<PostBody post={post} />
+		</StyledArticle>
 	)
 }
