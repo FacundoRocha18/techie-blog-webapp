@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { News, Post, Register } from 'components'
 import { ThemeProvider } from 'contexts/ThemeContext'
-import { Root, ErrorPage } from 'routes'
+import { Root, ErrorPage } from 'router'
 
 import 'styles/index.css'
 import 'styles/variables.css'
