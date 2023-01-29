@@ -30,9 +30,9 @@ const MenuContainer = styled('div')<IStyledComponent>`
 
 
 const SwitchContainer = styled('div') <IStyledComponent>`
+	display: flex;	
 	justify-content: space-between;
 	padding: 6px 12px;
-	opacity: 0;
 	width: 100%;
 	transition: all .3s ease;
 
