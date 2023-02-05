@@ -13,6 +13,11 @@ const StyledCard = styled('article')`
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(2, auto);
 	height: 325px;
+
+	& img {
+		border-radius: 4px;
+		width: 100%;
+	}
 `
 
 export const PostCard = ({ data }: { data: IPost }) => {
