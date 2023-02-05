@@ -13,7 +13,7 @@ export const News = () => {
 			</StyledSubtitle>
 			<StyledContainer className='news-container' >
 				{
-					true
+					loading
 						?
 						<CardTemplate />
 						:

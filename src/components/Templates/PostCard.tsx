@@ -12,7 +12,7 @@ const StyledCard = styled('article')`
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(2, auto);
-	height: fit-content;
+	height: 325px;
 `
 
 export const PostCard = ({ data }: { data: IPost }) => {
