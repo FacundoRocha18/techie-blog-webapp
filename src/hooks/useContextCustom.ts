@@ -7,7 +7,7 @@ import { createContext, useContext } from 'react'
  * @returns [useContextCustom, context.Provider]
  */
 
-export const createContextCustom = <A extends {} | null>() => {
+export const createContextCustom = <A extends object | null>() => {
   const context = createContext<A | undefined>(undefined)
 
   const useContextCustom = () => {

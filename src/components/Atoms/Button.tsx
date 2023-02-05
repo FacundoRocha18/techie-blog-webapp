@@ -1,9 +1,11 @@
+import { IStyledComponent } from 'components/components.types'
 import styled from 'styled-components'
+import { ThemeProps } from 'types'
 
-export const CButton = styled('button')`
+export const StyledButton = styled('button') <IStyledComponent>`
 	align-items: center;
 	background-color: rgb(236 72 153);
-	border: 2px solid ${props => props.color};
+	border: 2px solid var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--black' : theme.translucent});
 	border-radius: 2px;
 	font-weight: 500;
 	display: flex;

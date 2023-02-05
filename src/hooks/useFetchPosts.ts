@@ -1,24 +1,35 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { fetchPosts } from 'services/TechieAPI/FetchPosts'
-import { fetchPostsFromSupabase } from 'services/Supabase/FetchPostsFromSupabase'
+import { fetchPostsFromSupabase } from 'services/SupabaseAPI/FetchPostsFromSupabase'
+import { IPost } from 'types'
 
 export const useFetchPosts = () => {
-	const [posts, setPosts] = useState([])
-	const [loading, setLoading] = useState(true)
+	const [posts, setPosts] = useState<IPost[]>([])
+	const [loading, setLoading] = useState(false)
+	const [error, setError] = useState('Sin errores')
 
+	const getPosts = async () => {
+		try {
+			setLoading(true)
+			const data = await fetchPostsFromSupabase()
+			
+			if (!data) throw new Error('No se pudo recuperar los datos')
+
+			setPosts(data)
+		} catch (err: any) {
+			setError(err.message)
+			alert('Algo parece haber salido mal: \n' + err)
+		} finally {
+			setLoading(false)
+		}
+	}
+
+	const shouldFetch = useRef(true)
 	useEffect(() => {
-		fetchPostsFromSupabase()
-			.then((data) => {
-				if (!data) throw new Error('No se pudo recuperar los datos')
-				setPosts(data)
-				setTimeout(() => setLoading(false), 1000)
-			})
-			.catch((err) => {
-				setTimeout(() => {
-					alert('Algo parece haber salido mal: \n' + err)
-				}, 1000)
-			})
+		if (shouldFetch.current) {
+			getPosts()
+		}
 	}, [])
 
 	return [posts, loading] as const
-}
+} 

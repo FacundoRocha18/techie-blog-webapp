@@ -3,27 +3,12 @@
 @tailwind components;
 
 @layer components {
-  
-  #home-container,
-  #post-container {
-    @apply mx-auto mt-24 h-full min-h-screen w-100% p-4 transition-colors duration-150 ease-linear;
-    @apply tablet:flex tablet:justify-center tablet:p-8;
-    @apply desktop:flex desktop:w-60% desktop:justify-center desktop:p-8;
-  }
-
-  #news-container {
-    @apply desktop:w-60%;
-  }
 
   #card-container,
   #empty-card {
     @apply grid grid-flow-col grid-cols-4 items-center gap-4 h-fit w-full justify-around rounded border-solid border-gray-800 p-2 text-left;
     @apply tablet:gap-8 tablet:p-4 tablet:grid-cols-2;
   }
-
-	#card-container {
-		@apply gap-0;
-	}
 
   #card-container img {
     @apply tablet:h-60 tablet:w-96;

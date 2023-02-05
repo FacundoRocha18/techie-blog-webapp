@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { News, Post, Register } from 'components'
-import { ThemeProvider } from 'contexts/ThemeContext'
-import { Root, ErrorPage } from 'routes'
+import { ThemeProvider } from 'contexts/Theme/ThemeContext'
+import { Root, ErrorPage } from 'router'
 
 import 'styles/index.css'
 import 'styles/variables.css'

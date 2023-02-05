@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { CContainer } from "components"
+import { StyledContainer } from "components"
 import { useMenuContext } from 'contexts/MenuContext'
-import { useThemeContext } from "contexts/ThemeContext"
+import { useThemeContext } from "contexts/Theme/ThemeContext"
 import { IStyledComponent } from 'components/components.types'
 
 

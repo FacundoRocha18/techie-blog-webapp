@@ -1,7 +1,7 @@
-import { CContainer, CToggle, StyledPrimLink, Navigation } from 'components'
+import { StyledContainer, CToggle, StyledPrimLink, Navigation } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import styled from 'styled-components'
 import { ThemeProps } from 'types'
 

@@ -1,4 +1,4 @@
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import styled from 'styled-components'
 import { StyledIcon } from 'components'
 import { IStyledComponent } from '../components.types'

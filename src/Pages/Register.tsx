@@ -1,8 +1,8 @@
 import { FormEvent, useState } from 'react'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { RegisterUser } from 'services/TechieAPI/RegisterUser'
-import { CButton, CSection, CInput, CLabel, CFieldset, CContainer, CForm, StyledTitle } from 'components'
-import { RegisterUserSupabaseAPI } from 'services/Supabase/RegisterUserFromSupabase'
+import { StyledButton, StyledSection, StyledInput, StyledLabel, StyledFieldset, StyledContainer, StyledForm, StyledTitle } from 'components'
+import { RegisterUserSupabaseAPI } from 'services/SupabaseAPI/RegisterUserFromSupabase'
 
 export const Register = () => {
 	const { theme } = useThemeContext()
@@ -18,27 +18,27 @@ export const Register = () => {
 	}
 
 	return (
-		<CSection>
-			<CContainer color={theme.color}>
+		<StyledSection>
+			<StyledContainer color={theme.color}>
 				<StyledTitle>Cree una nueva cuenta</StyledTitle>
-				<CForm onSubmit={(e) => handleSubmit(e)}>
-					<CFieldset>
-						<CLabel htmlFor="name-input">Tu nombre:</CLabel>
-						<CInput className={`${theme.fontColor} ${theme.card} ${theme.border}`} type='name' name='name' id='name-input' value={name} onChange={(e) => setName(e.target.value)} placeholder='Jhon Doe' />
-					</CFieldset>
-					<CFieldset>
-						<CLabel htmlFor="email-input">Tu email:</CLabel>
-						<CInput className={`${theme.fontColor} ${theme.card} ${theme.border}`} type='email' name='email' id='email-input' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='john.doe@gmail.com' />
-					</CFieldset>
-					<CFieldset>
-						<CLabel htmlFor="password-input">Tu contraseña:</CLabel>
-						<CInput className={`${theme.fontColor} ${theme.card} ${theme.border}`} type='password' name='password' id='password-input' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='contraseña' />
-					</CFieldset>
-					<CButton>
+				<StyledForm onSubmit={(e) => handleSubmit(e)}>
+					<StyledFieldset>
+						<StyledLabel htmlFor="name-input">Tu nombre:</StyledLabel>
+						<StyledInput theme={theme} type='name' name='name' id='name-input' value={name} onChange={(e) => setName(e.target.value)} placeholder='Jhon Doe' />
+					</StyledFieldset>
+					<StyledFieldset>
+						<StyledLabel htmlFor="email-input">Tu email:</StyledLabel>
+						<StyledInput theme={theme} type='email' name='email' id='email-input' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='john.doe@gmail.com' />
+					</StyledFieldset>
+					<StyledFieldset>
+						<StyledLabel htmlFor="password-input">Tu contraseña:</StyledLabel>
+						<StyledInput theme={theme} type='password' name='password' id='password-input' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='contraseña' />
+					</StyledFieldset>
+					<StyledButton theme={theme}>
 						<p>Registrarse</p>
-					</CButton>
-				</CForm>
-			</CContainer>
-		</CSection>
+					</StyledButton>
+				</StyledForm>
+			</StyledContainer>
+		</StyledSection>
 	)
 }

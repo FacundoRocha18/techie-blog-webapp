@@ -1,7 +1,7 @@
-import { StyledPrimLink as StyledNavLink, StyledHeader, StyledSecLink } from 'components'
+import { StyledPrimLink, StyledHeader, StyledSecLink } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
-import { useThemeContext } from 'contexts/ThemeContext'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import styled from 'styled-components'
 import { ThemeProps } from 'types'
 
@@ -27,8 +27,6 @@ const StyledUList = styled('ul') <IStyledComponent>`
 			flex-direction: row;
 			justify-content: flex-end;
 		}
-
-		
 `
 
 const StyledNav = styled('nav') <IStyledComponent>`
@@ -94,7 +92,7 @@ export const Navigation = ({ className }: { className?: string }) => {
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledNavLink to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledNavLink></StyledListItem>
+					<StyledListItem><StyledPrimLink theme={theme} to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledPrimLink></StyledListItem>
 				</StyledUList>
 			</StyledNav>
 		</>
