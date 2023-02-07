@@ -35,10 +35,17 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		height: 100%;
 		overflow: hidden;
 		width: 100%;
+		transition: all .5s ease;
 
 		${StyledHeader} & {
 			display: none;
-		}	
+		}
+		
+		@media (min-width: 768px) {
+			& {
+				width: 60%;
+			}	
+		}
 
 		@media (min-width: 1080px) {
 			${StyledHeader} & {
@@ -68,12 +75,11 @@ const StyledNav = styled('nav') <IStyledComponent>`
 				width: 100%;
 			}
 
-			.menu li {
+			${StyledHeader} & ul li {
 				border: none;
 			}
 
-			.menu li:last-child {
-				display: none;
+			${StyledHeader} & ul li:last-child {
 				margin-top: 0px;
 			}
 }

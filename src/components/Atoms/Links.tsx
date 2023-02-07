@@ -5,8 +5,8 @@ import { ThemeProps } from 'types'
 
 export const StyledPrimLink = styled(Link) <IStyledComponent>`
 	align-items: center;
-	background-color: rgb(236 72 153);
-	border: 2px solid var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--black' : theme.translucent});
+	background-color: var(--primary-accent);
+	border: 2px solid var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--black' : '--primary-accent'});
 	border-radius: 2px;
 	display: flex;
 	font-weight: 500;

@@ -5,15 +5,17 @@ import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import styled from 'styled-components'
 import { ThemeProps } from 'types'
 
-
-
-const MenuContainer = styled('div')<IStyledComponent>`
-	background-color: var(${({theme}: ThemeProps) => theme.header});
+const StyledMenuContainer = styled('div') <IStyledComponent>`
+	align-items: center;
+	background-color: var(${({ theme }: ThemeProps) => theme.header});
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
-	height: 100%;
 	flex-direction: column;
-	width: 100vw;
+	display: flex;
+	gap: 16px;
+	height: 100%;
+	padding: 16px;
+	width: 100%;
 	transition: all .3s ease;
 
 
@@ -28,13 +30,25 @@ const MenuContainer = styled('div')<IStyledComponent>`
 	}
 `
 
-
 const SwitchContainer = styled('div') <IStyledComponent>`
+	align-items: center;
 	display: flex;	
 	justify-content: space-between;
 	padding: 6px 12px;
-	width: 100%;
-	transition: all .3s ease;
+	height: 0px;
+	opacity: 0;
+	width: 0px;
+	transition: all .1s ease;
+
+	${StyledMenuContainer}.active & {
+		opacity: 1;
+	}
+
+	@media (min-width: 768px) {
+		& {
+			width: 60%;
+		}		
+	}
 
 	@media (min-width: 1080px) {
 		& {
@@ -49,13 +63,13 @@ export const Menu = () => {
 
 	return (
 		<>
-			<MenuContainer theme={theme} className={`container menu-container ${isVisible ? 'active' : 'inactive'}`}>
+			<StyledMenuContainer theme={theme} className={`${isVisible ? 'active' : 'inactive'}`}>
 				<Navigation />
-				<SwitchContainer>
+				<SwitchContainer >
 					<p>Tema: </p>
 					<CToggle />
 				</SwitchContainer>
-			</MenuContainer>
+			</StyledMenuContainer>
 		</>
 	)
 }

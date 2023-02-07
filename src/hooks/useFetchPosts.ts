@@ -11,7 +11,7 @@ export const useFetchPosts = () => {
 	const getPosts = async () => {
 		try {
 			setLoading(true)
-			const data = await fetchPostsFromSupabase()
+			const data = await fetchPosts()
 			
 			if (!data) throw new Error('No se pudo recuperar los datos')
 

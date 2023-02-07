@@ -37,7 +37,7 @@ export const THEMES: Record<ThemeType, Theme> = {
 		border: Colors.LIGHTGRAY,
     card: Colors.DARKZINC,
     color: Colors.LIGHTGRAY,
-    header: Colors.DARKERZINCTRANSLUCENT,
+    header: Colors.BLACKTRANSLUCENT,
 		placeholders: Colors.DARKGRAY,
 		translucent: Colors.TRANSLUCENT,
 		headingSize: TextSizes.HEADING,

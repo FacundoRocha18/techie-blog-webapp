@@ -113,9 +113,13 @@ body {
 
 @media (min-width: 1080px) {
 
+	.header-title {
+		grid-column: span 1 / span 1;
+	}
+
 	.header .menu {
-		grid-column: span 10 / span 10;
-		grid-column-start: 2;
+		grid-column: span 2 / span 2;
+		grid-column-start: 3;
 		width: 100%;
 	}
 
@@ -123,10 +127,9 @@ body {
 		align-items: center;
 		display: flex;
 		gap: 8px;
-		width: 100%;
 	}
 
-	.menu li {
+	.header .menu li a {
 		border: none;
 	}
 
@@ -148,11 +151,6 @@ body {
 	width: 100vw;
 	transition: height .5s ease;
 	z-index: 100;
-}
-
-#sidebar {
-	background-color: red;
-	height: 100%;
 }
 
 #overlay.active {

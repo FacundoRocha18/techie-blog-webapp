@@ -23,6 +23,16 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 	width: 100%;
 	z-index: 50;
 	transition: background-color .5s ease;
+
+	@media (min-width: 1080px) {
+		height: fit-content;		
+	}
+
+	@media (min-width: 1080px) {
+		& button {
+			display: none;
+		}
+	}
 `
 
 export const Header = () => {

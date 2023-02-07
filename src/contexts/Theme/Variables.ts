@@ -7,9 +7,9 @@ export enum Colors {
 	DARKGRAY = '--gray-900',
 	DARKZINC = '--zinc-700',
 	DARKERZINC = '--zinc-800',
-	DARKERZINCTRANSLUCENT = '--zinc-800-translucid',
 	MEDIUMSLATE = '--slate-400',
-	TRANSLUCENT = '--translucent'
+	TRANSLUCENT = '--translucent',
+	PRIMARYACCENT = '--primary-accent',
 }
 
 export enum TextSizes {
