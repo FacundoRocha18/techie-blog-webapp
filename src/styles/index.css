@@ -122,21 +122,6 @@ body {
 		grid-column-start: 3;
 		width: 100%;
 	}
-
-	.header .menu ul {
-		align-items: center;
-		display: flex;
-		gap: 8px;
-	}
-
-	.header .menu li a {
-		border: none;
-	}
-
-	.menu li:last-child {
-		display: none;
-		margin-top: 0px;
-	}
 }
 
 /* End of header */

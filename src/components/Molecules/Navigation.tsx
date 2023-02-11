@@ -1,8 +1,8 @@
+import styled from 'styled-components'
 import { StyledPrimLink, StyledHeader, StyledSecLink } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
-import styled from 'styled-components'
 import { ThemeProps } from 'types'
 
 const StyledListItem = styled('li')`
@@ -13,6 +13,16 @@ const StyledListItem = styled('li')`
 	&:last-child {
 		border-bottom: none;
 		margin-top: 16px;
+	}
+
+	@media (min-width: 1080px) {
+		${StyledHeader} & {
+				border: none;
+		}
+
+		${StyledHeader} &:last-child {
+				margin-top: 0px;
+		}
 	}
 `
 
@@ -25,7 +35,9 @@ const StyledUList = styled('ul') <IStyledComponent>`
 		${StyledHeader} & {
 			align-items: center;
 			flex-direction: row;
+			gap: 8px;
 			justify-content: flex-end;
+			width: 100%;
 		}
 `
 
@@ -42,7 +54,7 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		}
 		
 		@media (min-width: 768px) {
-			& {
+			${StyledHeader} & {
 				width: 60%;
 			}	
 		}
@@ -50,6 +62,9 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		@media (min-width: 1080px) {
 			${StyledHeader} & {
 				display: flex;
+				grid-column: span 10 / span 10;
+				grid-column-start: 2;
+				width: 100%;
 			}	
 		}
 
@@ -60,29 +75,6 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		${StyledUList} ${StyledListItem}:last-child {
 				border-bottom: none;
 		}
-
-		@media (min-width: 1080px) {
-			${StyledHeader} & {
-				grid-column: span 10 / span 10;
-				grid-column-start: 2;
-				width: 100%;
-			}
-	
-			.header .menu ul {
-				align-items: center;
-				display: flex;
-				gap: 8px;
-				width: 100%;
-			}
-
-			${StyledHeader} & ul li {
-				border: none;
-			}
-
-			${StyledHeader} & ul li:last-child {
-				margin-top: 0px;
-			}
-}
 `
 
 export const Navigation = ({ className }: { className?: string }) => {

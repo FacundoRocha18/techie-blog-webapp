@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const StyledCard = styled('article')`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
-	box-shadow: var(${({theme}: ThemeProps) => theme.name === 'light' ? '--dark-shadow' : 'translucent'});
+	box-shadow: var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--dark-shadow' : 'translucent'});
 	border-radius: 4px;
 	color: var(${props => props.color});
 	display: grid;

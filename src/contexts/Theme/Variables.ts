@@ -1,4 +1,6 @@
 export enum Colors {
+	LIGHTERBLACK = '--lighter-black',
+	LIGHTBLACK = '--light-black',
 	BLACK = '--black',
 	BLACKTRANSLUCENT = '--black-translucent',
 	LIGHTGRAY = '--gray-100',
@@ -11,6 +13,7 @@ export enum Colors {
 	TRANSLUCENT = '--translucent',
 	PRIMARYACCENT = '--primary-accent',
 }
+
 
 export enum TextSizes {
 	HEADING = '--heading-text',

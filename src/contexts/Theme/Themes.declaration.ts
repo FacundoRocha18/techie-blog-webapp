@@ -33,9 +33,9 @@ export const THEMES: Record<ThemeType, Theme> = {
 		name: ThemeNames.LIGHT,
   },
   dark: {
-    background: Colors.BLACK,
+    background: Colors.LIGHTBLACK,
 		border: Colors.LIGHTGRAY,
-    card: Colors.DARKZINC,
+    card: Colors.LIGHTERBLACK,
     color: Colors.LIGHTGRAY,
     header: Colors.BLACKTRANSLUCENT,
 		placeholders: Colors.DARKGRAY,
