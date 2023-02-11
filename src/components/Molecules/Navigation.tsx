@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeader, StyledSecLink } from 'components'
+import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSwitch } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -13,16 +13,6 @@ const StyledListItem = styled('li')`
 	&:last-child {
 		border-bottom: none;
 		margin-top: 16px;
-	}
-
-	@media (min-width: 1080px) {
-		${StyledHeader} & {
-				border: none;
-		}
-
-		${StyledHeader} &:last-child {
-				margin-top: 0px;
-		}
 	}
 `
 
@@ -52,6 +42,14 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		${StyledHeader} & {
 			display: none;
 		}
+	
+		${StyledUList} ${StyledListItem} {
+				border-bottom: 1px solid var(${({ theme }: ThemeProps) => theme.color});
+		}
+
+		${StyledUList} ${StyledListItem}:last-child {
+				border-bottom: none;
+		}
 		
 		@media (min-width: 768px) {
 			${StyledHeader} & {
@@ -59,21 +57,20 @@ const StyledNav = styled('nav') <IStyledComponent>`
 			}	
 		}
 
-		@media (min-width: 1080px) {
+		@media only screen and (min-width: 992px) {
 			${StyledHeader} & {
 				display: flex;
-				grid-column: span 10 / span 10;
-				grid-column-start: 2;
-				width: 100%;
+				grid-column: span 4 / span 4;
+				grid-column-start: 9;
 			}	
+
+			${StyledHeader} & ${StyledUList} ${StyledListItem} {
+				border: none ;
 		}
 
-		${StyledUList} ${StyledListItem} {
-				border-bottom: 1px solid var(${({ theme }: ThemeProps) => theme.color});
+		${StyledHeader} & ${StyledUList} ${StyledListItem}:last-child {
+				margin-top: 0px;
 		}
-
-		${StyledUList} ${StyledListItem}:last-child {
-				border-bottom: none;
 		}
 `
 
@@ -90,6 +87,7 @@ export const Navigation = ({ className }: { className?: string }) => {
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><ThemeSwitch /></StyledListItem>
 					<StyledListItem><StyledPrimLink theme={theme} to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledPrimLink></StyledListItem>
 				</StyledUList>
 			</StyledNav>

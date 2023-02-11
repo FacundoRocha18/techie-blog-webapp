@@ -4,7 +4,7 @@ import { StyledIcon } from 'components'
 import { IStyledComponent } from '../components.types'
 import { ThemeProps } from 'types'
 
-const Switch = styled('button') <IStyledComponent>`
+const StyledSwitch = styled('button') <IStyledComponent>`
 	align-items: center;
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
 	border: solid 2px var(${({ theme }: ThemeProps) => theme.border});
@@ -14,14 +14,14 @@ const Switch = styled('button') <IStyledComponent>`
 	width: 64px;
 `
 
-export const CToggle = () => {
+export const ThemeSwitch = () => {
 	const { theme, themeName, toggleTheme } = useThemeContext()
 
 	return (
-		<Switch theme={theme} onClick={() => toggleTheme()}>
+		<StyledSwitch theme={theme} onClick={() => toggleTheme()}>
 			<StyledIcon className='material-icons'>
 				{themeName === 'light' ? 'dark_mode' : 'light_mode'}
 			</StyledIcon>
-		</Switch>
+		</StyledSwitch>
 	)
 }

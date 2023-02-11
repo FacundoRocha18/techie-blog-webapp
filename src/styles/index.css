@@ -99,7 +99,7 @@ body {
 /* Start of header */
 
 .header-title {
-	grid-column: span 3 / span 3;
+	grid-column: span 1 / span 1;
 }
 
 .header .menu {
@@ -114,14 +114,9 @@ body {
 @media (min-width: 1080px) {
 
 	.header-title {
-		grid-column: span 1 / span 1;
+		grid-column: span 2 / span 2;
 	}
 
-	.header .menu {
-		grid-column: span 2 / span 2;
-		grid-column-start: 3;
-		width: 100%;
-	}
 }
 
 /* End of header */

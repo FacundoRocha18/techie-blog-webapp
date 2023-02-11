@@ -1,4 +1,4 @@
-import { StyledContainer, CToggle, StyledPrimLink, Navigation } from 'components'
+import { StyledContainer, ThemeSwitch, StyledPrimLink, Navigation } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -67,7 +67,7 @@ export const Menu = () => {
 				<Navigation />
 				<SwitchContainer >
 					<p>Tema: </p>
-					<CToggle />
+					<ThemeSwitch />
 				</SwitchContainer>
 			</StyledMenuContainer>
 		</>

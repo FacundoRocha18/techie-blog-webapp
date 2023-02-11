@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { StyledTitle, MenuToggle, Overlay, Menu, Navigation, CToggle, StyledPrimLink } from 'components'
+import { StyledTitle, MenuToggle, Overlay, Menu, Navigation, ThemeSwitch, StyledPrimLink } from 'components'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { IStyledComponent } from 'components/components.types'
@@ -25,13 +25,12 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 	transition: background-color .5s ease;
 
 	@media (min-width: 1080px) {
-		height: fit-content;		
-	}
+		grid-template-columns: repeat(12, 1fr);
+		height: fit-content;
 
-	@media (min-width: 1080px) {
 		& button {
 			display: none;
-		}
+		}		
 	}
 `
 
