@@ -34,7 +34,9 @@ h4,
 p,
 a,
 input,
-input::placeholder {
+input::placeholder,
+select,
+option {
 	font: inherit;
 	color: inherit;
 }
@@ -42,12 +44,14 @@ input::placeholder {
 input,
 textarea,
 button,
-select,
 p,
 a,
 input,
 input::placeholder,
-span {
+span, 
+label,
+select,
+option {
 	font-size: var(--body-text);
 	font-weight: var(--body-weight);
 }
@@ -96,50 +100,9 @@ body {
 
 /* End of app-container */
 
-/* Start of header */
-
-.header-title {
-	grid-column: span 1 / span 1;
-}
-
-.header .menu {
-	display: none;
-}
-
-.header-buttons {
-	display: none;
-}
-
-
-@media (min-width: 1080px) {
-
-	.header-title {
-		grid-column: span 2 / span 2;
-	}
-
-}
-
-/* End of header */
-
 /* Start of overlay */
 
-#overlay {
-	height: 0px;
-	position: fixed;
-	top: 48px;
-	overflow: hidden;
-	width: 100vw;
-	transition: height .5s ease;
-	z-index: 100;
-}
 
-#overlay.active {
-	height: calc(100vh - 48px);
-}
-
-#overlay.inactive {
-	height: 0px;
-}
 
 /* End of overlay */
 

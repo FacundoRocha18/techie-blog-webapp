@@ -27,10 +27,13 @@ export const ThemeProvider = ({ children }: ChildrenProps) => {
 
   const toggleTheme = () => setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
 
+	const changeTheme = (newTheme: ThemeType): void => setCurrentTheme(newTheme)
+
   const providerValue: IThemeContext = {
     theme: THEMES[currentTheme],
     themeName: currentTheme,
     toggleTheme,
+		changeTheme
   }
 
   return <ContextProvider value={providerValue}>{children}</ContextProvider>

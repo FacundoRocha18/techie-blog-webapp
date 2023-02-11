@@ -16,17 +16,21 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 	grid-template-columns: repeat(4, 1fr);
 	height: 48px;
 	left: 0;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding: 0px 16px;
 	position: sticky;
 	top: 0;
 	width: 100%;
 	z-index: 50;
 	transition: background-color .5s ease;
 
+	& .header-title {
+		grid-column: span 2 / span 2;
+	}
+
 	@media (min-width: 1080px) {
 		grid-template-columns: repeat(12, 1fr);
 		height: fit-content;
+		padding: 8px 16px;
 
 		& button {
 			display: none;

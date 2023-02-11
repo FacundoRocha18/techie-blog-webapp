@@ -4,6 +4,7 @@ export interface IThemeContext {
   theme: Theme
   themeName: string
   toggleTheme: VoidFunction
+	changeTheme: Function
 }
 
 interface IPostsContext {

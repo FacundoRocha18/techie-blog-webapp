@@ -13,6 +13,7 @@ const StyledMenuContainer = styled('div') <IStyledComponent>`
 	flex-direction: column;
 	display: flex;
 	gap: 16px;
+	justify-content: space-between;
 	height: 100%;
 	padding: 16px;
 	width: 100%;
@@ -35,9 +36,9 @@ const SwitchContainer = styled('div') <IStyledComponent>`
 	display: flex;	
 	justify-content: space-between;
 	padding: 6px 12px;
-	height: 0px;
+	height: fit-content;
 	opacity: 0;
-	width: 0px;
+	width: 100%;
 	transition: all .1s ease;
 
 	${StyledMenuContainer}.active & {

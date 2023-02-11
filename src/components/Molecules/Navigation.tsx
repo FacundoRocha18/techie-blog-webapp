@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSwitch } from 'components'
+import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSwitch, ThemeSelector } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -34,7 +34,7 @@ const StyledUList = styled('ul') <IStyledComponent>`
 const StyledNav = styled('nav') <IStyledComponent>`
 		color: var(${({ theme }: ThemeProps) => theme.color});
 		display: flex;
-		height: 100%;
+		height: fit-content;
 		overflow: hidden;
 		width: 100%;
 		transition: all .5s ease;
@@ -50,6 +50,10 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		${StyledUList} ${StyledListItem}:last-child {
 				border-bottom: none;
 		}
+
+		${StyledUList} ${StyledListItem}:nth-child(3) {
+				display: none;
+		}
 		
 		@media (min-width: 768px) {
 			${StyledHeader} & {
@@ -60,17 +64,23 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		@media only screen and (min-width: 992px) {
 			${StyledHeader} & {
 				display: flex;
-				grid-column: span 4 / span 4;
-				grid-column-start: 9;
+				grid-column: span 5 / span 5;
+				grid-column-start: 8;
+				width: 100%;
 			}	
 
 			${StyledHeader} & ${StyledUList} ${StyledListItem} {
-				border: none ;
-		}
+				  border: none;
+			}
 
-		${StyledHeader} & ${StyledUList} ${StyledListItem}:last-child {
-				margin-top: 0px;
-		}
+			${StyledUList} ${StyledListItem}:nth-child(3) {
+				display: flex;
+			}
+
+			${StyledHeader} & ${StyledUList} ${StyledListItem}:last-child {
+					margin-top: 0px;
+					margin-left: 12px;
+			}
 		}
 `
 
@@ -82,12 +92,9 @@ export const Navigation = ({ className }: { className?: string }) => {
 		<>
 			<StyledNav theme={theme}>
 				<StyledUList>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
+					<StyledListItem><StyledSecLink to={'/'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><ThemeSwitch /></StyledListItem>
+					<StyledListItem><ThemeSelector /></StyledListItem>
 					<StyledListItem><StyledPrimLink theme={theme} to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledPrimLink></StyledListItem>
 				</StyledUList>
 			</StyledNav>

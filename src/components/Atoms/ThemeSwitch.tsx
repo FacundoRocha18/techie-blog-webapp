@@ -11,7 +11,7 @@ const StyledSwitch = styled('button') <IStyledComponent>`
 	border-radius: 9999px;
 	display: flex;
 	justify-content: ${({ theme }: ThemeProps) => theme.name === 'light' ? 'flex-end' : 'flex-start'};
-	width: 64px;
+	min-width: 64px;
 `
 
 export const ThemeSwitch = () => {
