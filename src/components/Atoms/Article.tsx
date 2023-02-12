@@ -12,7 +12,7 @@ export const StyledArticle = styled('article')`
 		width: 100%;
 		transition: all 150ms ease;
 
-		@media (min-width: 768px) {
+		@media only screen and (min-width: 768px) {
 			& {
 				display: flex;
 				justify-content: center;
@@ -20,7 +20,7 @@ export const StyledArticle = styled('article')`
 			}
 		}
 
-		@media (min-width: 1080px) {
+		@media only screen and (min-width: 992px) {
 			& {
 				display: flex;
 			justify-content: center;

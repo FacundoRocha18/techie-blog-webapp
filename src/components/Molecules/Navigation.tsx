@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSwitch, ThemeSelector } from 'components'
+import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSelector } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -55,17 +55,17 @@ const StyledNav = styled('nav') <IStyledComponent>`
 				display: none;
 		}
 		
-		@media (min-width: 768px) {
+		@media (max-width: 768px) {
 			${StyledHeader} & {
 				width: 60%;
 			}	
 		}
 
-		@media only screen and (min-width: 992px) {
+		@media only screen and (min-width: calc(768px + 1px)) {
 			${StyledHeader} & {
 				display: flex;
-				grid-column: span 5 / span 5;
-				grid-column-start: 8;
+				grid-column: span 7 / span 7;
+				grid-column-start: 7;
 				width: 100%;
 			}	
 
@@ -90,7 +90,7 @@ export const Navigation = ({ className }: { className?: string }) => {
 
 	return (
 		<>
-			<StyledNav theme={theme}>
+			<StyledNav className='navigation' theme={theme}>
 				<StyledUList>
 					<StyledListItem><StyledSecLink to={'/'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
 					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</StyledSecLink></StyledListItem>
