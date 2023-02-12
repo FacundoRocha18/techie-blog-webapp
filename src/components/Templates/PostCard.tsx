@@ -18,6 +18,14 @@ const StyledCard = styled('article')`
 		border-radius: 4px;
 		width: 100%;
 	}
+
+	@media only screen and (min-width: 992px) {
+   align-items: center;
+   background-color: transparent;
+	 box-shadow: none;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(1, 1fr);
+ 	}
 `
 
 export const PostCard = ({ data }: { data: IPost }) => {
@@ -28,7 +36,7 @@ export const PostCard = ({ data }: { data: IPost }) => {
 			<CImage
 				src='https://images.macrumors.com/t/lyB4c1iPX6XBNTsqFd19N14goLQ=/2672x/article-new/2022/08/14-vs-16-inch-mbp-m2-pro-and-max-feature-1.jpg'
 				alt='Apple Macbook Pro M2 Pro'
-				height='200px'
+				height='100%'
 			/>
 			<CardBody data={data} />
 		</StyledCard>
