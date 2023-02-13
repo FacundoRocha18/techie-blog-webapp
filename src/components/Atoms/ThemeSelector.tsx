@@ -1,10 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from "styled-components"
+import styled from 'styled-components'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { IStyledComponent } from 'components/components.types'
 import { ThemeProps } from 'types'
-import { StyledIcon } from './Icon'
 
 
 const StyledSelector = styled('select') <IStyledComponent>`
@@ -17,31 +14,24 @@ const StyledSelector = styled('select') <IStyledComponent>`
 	padding: 8px; 
 	min-height: 30px;
 	width: fit-content;
-
 `
 
 export const ThemeSelector = () => {
-	const { theme, changeTheme } = useThemeContext()
+	const { theme, themeName, changeTheme } = useThemeContext()
 
 	return (
 		<>
 			<label htmlFor="theme-select">Tema: </label>
-			<StyledSelector theme={theme} name="theme-select" id='theme-select' onChange={(e) => changeTheme(e.target.value)}>
+			<StyledSelector theme={theme} name="theme-select" id='theme-select' defaultValue={themeName} onChange={(e) => changeTheme(e.target.value)}>
 				<option
 					value="light"
 					title='Tema claro'
-					className={theme.name === 'light' ? 'selected' : ''}
-					selected={theme.name === 'light' ? true : false}
 				>&#127774;</option>
 				<option
 					value="dark"
 					title='Tema oscuro'
-					className={theme.name === 'dark' ? 'selected' : ''}
-					selected={theme.name === 'dark' ? true : false}
 				>&#127771;</option>
 			</StyledSelector>
 		</>
 	)
 }
-
-ThemeSelector.propTypes = {}
