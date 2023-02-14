@@ -61,7 +61,7 @@ const StyledNav = styled('nav') <IStyledComponent>`
 			}	
 		}
 
-		@media only screen and (min-width: calc(768px + 1px)) {
+		@media only screen and (min-width: 1024px) {
 			${StyledHeader} & {
 				display: flex;
 				grid-column: span 7 / span 7;

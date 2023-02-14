@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledPrimLink, StyledSubtitle } from 'components'
+import { StyledPrimLink, StyledTitle } from 'components'
 import { Link } from 'react-router-dom'
-import { IPost } from 'types'
+import { IPost, ThemeProps } from 'types'
 import styled from 'styled-components'
+import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
 const StyledCardBody = styled('div')`
 	display: grid;
@@ -13,42 +14,102 @@ const StyledCardBody = styled('div')`
 	height: fit-content;
 	padding: 16px;
 
-	@media only screen and (min-width: 992px) {
-   padding: 0px 16px;
+	& .card-btn {
+		opacity: 1;
+		grid-column: span 3 / span 3;
+		grid-row: span 1 / span 1;
+		grid-row-start: 4;
+		transition: all .5s ease;
+	}
+
+	& .card-btn p {
+		white-space: nowrap;
+ 	 	overflow: hidden;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		& {
+			padding: 16px;
+		}
+
+		& .card-btn {
+			opacity: 0;
+			width: 0px;
+		}
+ 	}
+
+	@media only screen and (min-width: 1920px) {
+		& {
+			padding: 0px 16px;
+		}
+
+	 	&:hover .card-btn {
+			opacity: 1;
+			width: 100%;
+		}
  	}
 `
 
-const StyledAuthorParagraph = styled('p')`
-	color: rgb(212, 210, 210);
+const StyledContentParagraph = styled('div')`
 	grid-column: span 2 / span 2;
 	grid-row: span 1 / span 1;
 	grid-row-start: 3;
-	max-width: 100%;
+	position: relative;
 
 	@media (min-width: 768px) {
   	& {
     	display: inline;
   	}
 	}
+
+	@media only screen and (min-width: 1024px) {
+
+		& p {
+			white-space: pre;
+ 	 		overflow: hidden;
+		}
+
+		::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to left, var(${({ theme }: ThemeProps) => theme.background}),transparent);
+		}
+ 	}
+`
+
+const StyledAuthorParagraph = styled('p')`
+	grid-column: span 1 / span 1;
+	grid-row: span 1 / span 1;
+	grid-row-start: 2;
+	align-self: flex-start;
+`
+
+const StyledTextDecorator = styled('span')`
+	color: var(--primary-accent);
 `
 
 export const CardBody = ({ data }: { data: IPost }) => {
+	const { theme } = useThemeContext()
 
 	return (
 		<StyledCardBody>
 			<Link to={`post/${data.post_uuid}`}>
-				<StyledSubtitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledSubtitle>
+				<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
 			</Link>
-			<p className='col-span-1 row-span-1 row-start-2 self-start'>
-				Autor: <span className='text-pink-500'>{data.author_name}</span>
-			</p>
 			<StyledAuthorParagraph>
-				{data.content}
+				Autor: <StyledTextDecorator>{data.author_name}</StyledTextDecorator>
 			</StyledAuthorParagraph>
-			<p className='max-w-full col-span-1 row-span-1 row-start-3 tablet:inline desktop:inline'>
-			</p>
+			<StyledContentParagraph theme={theme}>
+				<p>
+					{data.content}
+				</p>
+			</StyledContentParagraph>
 			<StyledPrimLink to={`/post/${data.post_uuid}`} className='card-btn'>
-				Ver noticia
+				<p>Ver noticia</p>
 			</StyledPrimLink>
 		</StyledCardBody>
 	)

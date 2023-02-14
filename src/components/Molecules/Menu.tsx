@@ -8,8 +8,6 @@ import { ThemeProps } from 'types'
 const StyledMenuContainer = styled('div') <IStyledComponent>`
 	align-items: center;
 	background-color: var(${({ theme }: ThemeProps) => theme.header});
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
 	flex-direction: column;
 	display: flex;
 	gap: 16px;
@@ -51,7 +49,7 @@ const SwitchContainer = styled('div') <IStyledComponent>`
 		}		
 	}
 
-	@media (min-width: 1080px) {
+	@media (min-width: 1024px) {
 		& {
 			display: none;
 		}		

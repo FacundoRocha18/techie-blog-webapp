@@ -10,12 +10,18 @@ export const StyledSection = styled('section') <IStyledComponent>`
 	padding: 16px;
 	min-height: 100vh;
 	margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;  
 
-	@media (min-width: 1080px) {
-  & {
-    width: 60%;
-  }
-}
+	@media only screen and (min-width: 1920px) {
+		& {
+    	width: 50%;
+  	}
+ 	}
+
+	 @media only screen and (min-width: 2560px) {
+		& {
+    	width: 60%;
+  	}
+ 	}
 `
 

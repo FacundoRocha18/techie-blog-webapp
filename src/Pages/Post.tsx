@@ -5,8 +5,12 @@ import { IPost } from 'types'
 import { PostHeading, PostBody, StyledArticle } from 'components'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
+interface MyParams {
+	id: string
+}
+
 export const Post = () => {
-	const { id } = useParams()
+	const { id } = useParams<keyof MyParams>() as MyParams
 	const { posts } = usePostsContext()
 	const { theme } = useThemeContext()
 

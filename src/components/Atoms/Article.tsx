@@ -20,7 +20,7 @@ export const StyledArticle = styled('article')`
 			}
 		}
 
-		@media only screen and (min-width: 992px) {
+		@media only screen and (min-width: 1024px) {
 			& {
 				display: flex;
 			justify-content: center;

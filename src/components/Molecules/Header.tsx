@@ -27,7 +27,7 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 		grid-column: span 2 / span 2;
 	}
 
-	@media only screen and (min-width: 992px) {
+	@media only screen and (min-width: 1024px) {
 		& {
 			grid-template-columns: repeat(12, 1fr);
 			height: fit-content;
@@ -36,7 +36,12 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 
 		& button {
 			display: none;
-		}		
+		}
+
+		& .header-title {
+			grid-column: span 3 / span 3;
+			width: fit-content;
+		}
 	}
 `
 

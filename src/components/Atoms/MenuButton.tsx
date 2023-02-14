@@ -15,6 +15,8 @@ const StyledSpan = styled('span') <IStyledComponent>`
 
 const StyledMenuButton = styled('button') <IStyledComponent>`
 	align-items: center;
+	background-color: transparent;
+	border: none;
 	display: flex;
 	flex-direction: column;
 	grid-column: span 1 / span 1;

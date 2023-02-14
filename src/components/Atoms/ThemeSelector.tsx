@@ -21,8 +21,7 @@ export const ThemeSelector = () => {
 
 	return (
 		<>
-			<label htmlFor="theme-select">Tema: </label>
-			<StyledSelector theme={theme} name="theme-select" id='theme-select' defaultValue={themeName} onChange={(e) => changeTheme(e.target.value)}>
+			<StyledSelector theme={theme} name="theme-select" id='theme-select' defaultValue={themeName} onChange={(e) => changeTheme(e.target.value)} title='Seleccionar un tema'>
 				<option
 					value="light"
 					title='Tema claro'

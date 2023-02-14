@@ -48,12 +48,13 @@ p,
 a,
 input,
 input::placeholder,
-span, 
+span,
 label,
 select,
 option {
 	font-size: var(--body-text);
 	font-weight: var(--body-weight);
+	text-decoration: none;
 }
 
 body {
@@ -71,10 +72,6 @@ body {
 	display: none !important;
 }
 
-/* End of globals */
-
-/* Start of app-container */
-
 #app-container {
 	min-height: 100vh;
 	height: fit-content;
@@ -89,7 +86,7 @@ body {
 	}
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
 	#app-container {
 		align-items: center;
 		display: flex;
@@ -98,35 +95,12 @@ body {
 	}
 }
 
-/* End of app-container */
-
-/* Start of overlay */
-
-
-
-/* End of overlay */
-
-/* Start of sections */
-
-/* End of sections */
-
-
-/* Start of containers */
-
 .container {
 	align-items: center;
 	display: flex;
 	gap: 16px;
 	padding: 16px;
 }
-
-
-
-
-
-/* End of containers */
-
-/* Start of card */
 
 .template-card-image {
 	grid-column: span 4 / span 4;
@@ -157,22 +131,6 @@ body {
 	grid-row: span 1 / span 1;
 	grid-row-start: 3;
 }
-
-/* Start of card body */
-
-.card-btn {
-	display: none !important;
-	grid-column: span 3 / span 3;
-	grid-row: span 1 / span 1;
-	grid-row-start: 4;
-}
-
-@media (min-width: 768px) {
-	.card-btn {
-		display: flex !important;
-	}
-}
-
 
 @keyframes pulse {
 	50% {
