@@ -1,8 +1,13 @@
 import { FormEvent, useState } from 'react'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import { RegisterUser } from 'services/TechieAPI/RegisterUser'
-import { StyledButton, StyledSection, StyledInput, StyledLabel, StyledFieldset, StyledContainer, StyledForm, StyledTitle } from 'components'
+import { PrimaryButton, StyledSection, StyledInput, StyledLabel, StyledFieldset, StyledForm, StyledTitle, StyledRegisterContainer, TerciaryLink } from 'components'
 import { RegisterUserSupabaseAPI } from 'services/SupabaseAPI/RegisterUserFromSupabase'
+import styled from 'styled-components'
+
+const StyledParagraph = styled('p')`
+	grid-column: span 2 / span 2;
+`
 
 export const Register = () => {
 	const { theme } = useThemeContext()
@@ -19,7 +24,7 @@ export const Register = () => {
 
 	return (
 		<StyledSection>
-			<StyledContainer color={theme.color}>
+			<StyledRegisterContainer theme={theme}>
 				<StyledTitle>Cree una nueva cuenta</StyledTitle>
 				<StyledForm onSubmit={(e) => handleSubmit(e)}>
 					<StyledFieldset>
@@ -34,11 +39,15 @@ export const Register = () => {
 						<StyledLabel htmlFor="password-input">Tu contraseña:</StyledLabel>
 						<StyledInput theme={theme} type='password' name='password' id='password-input' value={password} onChange={(e) => setPassword(e.target.value)} placeholder='contraseña' />
 					</StyledFieldset>
-					<StyledButton theme={theme}>
+					<PrimaryButton theme={theme}>
 						<p>Registrarse</p>
-					</StyledButton>
+					</PrimaryButton>
+					<StyledParagraph>¿Ya tienes un cuenta?</StyledParagraph>
+					<TerciaryLink to={'#'}>
+						<p>Inicia sesion aqui</p>
+					</TerciaryLink>
 				</StyledForm>
-			</StyledContainer>
+			</StyledRegisterContainer>
 		</StyledSection>
 	)
 }

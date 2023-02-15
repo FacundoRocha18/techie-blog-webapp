@@ -12,8 +12,8 @@ export enum Colors {
 	MEDIUMSLATE = '--slate-400',
 	TRANSLUCENT = '--translucent',
 	PRIMARYACCENT = '--primary-accent',
+	INPUTCOLOR = '--'
 }
-
 
 export enum TextSizes {
 	HEADING = '--heading-text',

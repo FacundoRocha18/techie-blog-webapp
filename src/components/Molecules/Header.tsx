@@ -15,6 +15,7 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	height: 48px;
+	justify-content: space-between;
 	left: 0;
 	padding: 0px 16px;
 	position: sticky;
@@ -25,6 +26,18 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 
 	& .header-title {
 		grid-column: span 2 / span 2;
+	}
+
+	& .header-button {
+		display: flex;		
+		grid-column: span 2 / span 2;
+		justify-content: flex-end;
+	}
+
+	@media only screen and (min-width: 768px) {
+		& {
+			padding: 8px 32px;
+		}
 	}
 
 	@media only screen and (min-width: 1024px) {
@@ -56,7 +69,9 @@ export const Header = () => {
 					<StyledTitle>Techie blog</StyledTitle>
 				</Link>
 				<Navigation />
-				<MenuToggle />
+				<div className='header-button'>
+					<MenuToggle />
+				</div>
 			</StyledHeader>
 			<Overlay>
 				<Menu />

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledPrimLink, StyledTitle } from 'components'
+import { StyledPrimLink, StyledTitle, TextDecorator } from 'components'
 import { Link } from 'react-router-dom'
 import { IPost, ThemeProps } from 'types'
 import styled from 'styled-components'
@@ -65,8 +65,10 @@ const StyledContentParagraph = styled('div')`
 	@media only screen and (min-width: 1024px) {
 
 		& p {
-			white-space: pre;
- 	 		overflow: hidden;
+			overflow: hidden;
+			max-height: 12rem;
+			text-align: justify; 
+			text-overflow: ellipsis;
 		}
 
 		::before {
@@ -88,10 +90,6 @@ const StyledAuthorParagraph = styled('p')`
 	align-self: flex-start;
 `
 
-const StyledTextDecorator = styled('span')`
-	color: var(--primary-accent);
-`
-
 export const CardBody = ({ data }: { data: IPost }) => {
 	const { theme } = useThemeContext()
 
@@ -101,7 +99,7 @@ export const CardBody = ({ data }: { data: IPost }) => {
 				<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
 			</Link>
 			<StyledAuthorParagraph>
-				Autor: <StyledTextDecorator>{data.author_name}</StyledTextDecorator>
+				Autor: <TextDecorator>{data.author_name}</TextDecorator>
 			</StyledAuthorParagraph>
 			<StyledContentParagraph theme={theme}>
 				<p>

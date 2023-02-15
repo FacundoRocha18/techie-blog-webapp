@@ -24,6 +24,7 @@ const StyledCard = styled('article')`
 			align-items: center;
 			background-color: transparent;
 			box-shadow: none;
+			gap: 64px;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(1, 1fr);
 		}

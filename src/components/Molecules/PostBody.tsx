@@ -1,21 +1,29 @@
 import PropTypes from 'prop-types'
 import { CImage } from 'components'
 import { IPost } from 'types'
+import styled from 'styled-components'
+
+const StyledBodyContainer = styled('div')`
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+`
 
 export const PostBody = ({ post }: { post: IPost }) => {
-  return (
-    <div className='flex flex-col gap-20 items-center'>
-      <CImage
-        src='https://www.amd.com/system/files/styles/600px/private/2022-11/1761310-amd-ryzen-9-7000-series-PIB-angle-1260x709.png?itok=_NVpbZqF'
-        alt='AMD Ryzen 7000 series'
-        height='h-auto'
-        width='w-3/4'
-      />
-      <p className='mb-[20px] desktop:w-60%'>{post.content}</p>
-    </div>
-  )
+	return (
+		<StyledBodyContainer>
+			<CImage
+				src='https://www.amd.com/system/files/styles/600px/private/2022-11/1761310-amd-ryzen-9-7000-series-PIB-angle-1260x709.png?itok=_NVpbZqF'
+				alt='AMD Ryzen 7000 series'
+				height='h-auto'
+				width='w-3/4'
+			/>
+			<p>{post.content}</p>
+		</StyledBodyContainer>
+	)
 }
 
 PostBody.propTypes = {
-  post: PropTypes.object.isRequired,
+	post: PropTypes.object.isRequired,
 }

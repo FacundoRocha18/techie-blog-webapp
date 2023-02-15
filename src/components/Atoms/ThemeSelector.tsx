@@ -6,6 +6,7 @@ import { ThemeProps } from 'types'
 
 const StyledSelector = styled('select') <IStyledComponent>`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
+	border: none;
 	border-radius: 4px;
 	box-sizing: border-box;
   -moz-box-sizing: border-box;

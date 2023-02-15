@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeader, StyledSecLink, ThemeSelector } from 'components'
+import { StyledPrimLink, StyledHeader, SecondaryLink, ThemeSelector } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -92,8 +92,8 @@ export const Navigation = ({ className }: { className?: string }) => {
 		<>
 			<StyledNav className='navigation' theme={theme}>
 				<StyledUList>
-					<StyledListItem><StyledSecLink to={'/'} onClick={() => setIsVisible(false)}>Inicio</StyledSecLink></StyledListItem>
-					<StyledListItem><StyledSecLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</StyledSecLink></StyledListItem>
+					<StyledListItem><SecondaryLink to={'/'} onClick={() => setIsVisible(false)}>Inicio</SecondaryLink></StyledListItem>
+					<StyledListItem><SecondaryLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</SecondaryLink></StyledListItem>
 					<StyledListItem><ThemeSelector /></StyledListItem>
 					<StyledListItem><StyledPrimLink theme={theme} to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledPrimLink></StyledListItem>
 				</StyledUList>

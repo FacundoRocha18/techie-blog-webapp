@@ -12,6 +12,7 @@ export interface Theme {
 	inputSize: string
 	placeholders: string
 	translucent: string
+	inputColor: string
 	name: ThemeType
 }
 
@@ -30,6 +31,7 @@ export const THEMES: Record<ThemeType, Theme> = {
 		subheadingSize: TextSizes.SUBHEADING,
 		bodySize: TextSizes.BODY,
 		inputSize: TextSizes.INPUTFIELDS,
+		inputColor: Colors.DARKGRAY,
 		name: ThemeNames.LIGHT,
   },
   dark: {
@@ -44,6 +46,7 @@ export const THEMES: Record<ThemeType, Theme> = {
 		subheadingSize: TextSizes.SUBHEADING,
 		bodySize: TextSizes.BODY,
 		inputSize: TextSizes.INPUTFIELDS,
+		inputColor: Colors.DARKGRAY,
 		name: ThemeNames.DARK
   },
 }

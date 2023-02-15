@@ -5,7 +5,7 @@ export * from '../Pages/News'
 
 // Templates
 export * from './Templates/CardLoader'
-export * from './Templates/PostCard'
+export * from './Organisms/PostCard'
 
 // Molecules
 export * from './Molecules/Header'
@@ -17,7 +17,7 @@ export * from './Molecules/Menu'
 export * from './Molecules/Navigation'
 
 // Atoms
-export * from './Atoms/Button'
+export * from './Atoms/Buttons'
 export * from './Atoms/Links'
 export * from './Atoms/Image'
 export * from './Atoms/Section'
@@ -25,13 +25,14 @@ export * from './Atoms/Input'
 export * from './Atoms/Label'
 export * from './Atoms/Title'
 export * from './Atoms/Fieldset'
-export * from './Atoms/Container'
+export * from './Atoms/Containers'
 export * from './Atoms/Form'
 export * from './Atoms/ThemeSwitch'
 export * from './Atoms/ThemeSelector'
 export * from './Atoms/MenuButton'
 export * from './Atoms/Icon'
 export * from './Atoms/Article'
+export * from './Atoms/Decorators'
 
 
 

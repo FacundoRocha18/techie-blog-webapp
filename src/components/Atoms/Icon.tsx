@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const StyledIcon = styled.span`
+export const StyledIcon = styled('span')`
 	align-items: center;
 	border-radius: 9999px;
 	display: flex;

@@ -1,10 +1,8 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const StyledArticle = styled('article')`
-		align-items: center;
 		display: flex;
 		flex-direction: column;
-		gap: 80px;
 		height: 100%;
 		margin: 0 auto;
 		min-height: 100vh;
@@ -15,17 +13,25 @@ export const StyledArticle = styled('article')`
 		@media only screen and (min-width: 768px) {
 			& {
 				display: flex;
-				justify-content: center;
 				padding: 32px;
 			}
 		}
 
 		@media only screen and (min-width: 1024px) {
 			& {
-				display: flex;
-			justify-content: center;
-			padding: 32px;
-			width: 60%;
+				width: 80%;
 			}
 		}
+
+		@media only screen and (min-width: 1920px) {
+			& {
+				width: 60%;
+			}
+		}
+
+		@media only screen and (min-width: 2560px) {
+			& {
+				width: 50%;
+			}
+ 		}
 `

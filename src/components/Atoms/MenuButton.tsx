@@ -20,13 +20,16 @@ const StyledMenuButton = styled('button') <IStyledComponent>`
 	display: flex;
 	flex-direction: column;
 	grid-column: span 1 / span 1;
-	position: absolute;
-	top: 0;
-	right: 0;
 	justify-content: center;
 	gap: 8px;
-	height: 48px;
-	width: 48px;
+	height: 28px;
+	width: 28px;
+
+	@media only screen and (min-width: 768px) {
+			& {
+				right: 32px;
+			}
+		}
 
 	&.active span:first-child {
 		transform: rotateZ(-45deg) scaleX(1) translate(-2px, 4px);

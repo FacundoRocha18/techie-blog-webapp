@@ -27,6 +27,12 @@ const StyledMenuContainer = styled('div') <IStyledComponent>`
 		opacity: 0;
 		transition: all .3s ease;
 	}
+
+	@media only screen and (min-width: 768px) {
+		& {
+			padding: 8px 32px;
+		}
+	}
 `
 
 const SwitchContainer = styled('div') <IStyledComponent>`
@@ -45,7 +51,7 @@ const SwitchContainer = styled('div') <IStyledComponent>`
 
 	@media (min-width: 768px) {
 		& {
-			width: 60%;
+			width: 100%;
 		}		
 	}
 

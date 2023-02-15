@@ -8,6 +8,7 @@ export const StyledPrimLink = styled(Link) <IStyledComponent>`
 	background-color: var(--primary-accent);
 	border: 2px solid var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--black' : '--primary-accent'});
 	border-radius: 2px;
+	color: inherit;
 	display: flex;
 	font-weight: 500;
 	justify-content: center;
@@ -20,10 +21,19 @@ export const StyledPrimLink = styled(Link) <IStyledComponent>`
 	}
 `
 
-export const StyledSecLink = styled(Link) <IStyledComponent>`
+export const SecondaryLink = styled(Link) <IStyledComponent>`
  	display: inline-block;
-	color: inherit;
 	height: 100%;
 	padding: 6px 12px;
+	width: 100%;
+`
+
+export const TerciaryLink = styled(Link) <IStyledComponent> `
+	color: var(--primary-accent);
+	display: inline-block;
+	grid-column: span 2 / span 2;
+	height: 100%;
+	padding: 6px 12px;
+	text-align: right;
 	width: 100%;
 `

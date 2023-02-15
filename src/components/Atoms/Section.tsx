@@ -3,6 +3,7 @@ import { IStyledComponent } from 'components/components.types'
 import { ThemeProps } from 'types'
 
 export const StyledSection = styled('section') <IStyledComponent>`
+	align-items: flex-start;
 	color: var(${({ theme }: ThemeProps) => theme.color});
 	display: flex;
 	flex-direction: column;
@@ -18,7 +19,7 @@ export const StyledSection = styled('section') <IStyledComponent>`
   	}
  	}
 
-	 @media only screen and (min-width: 2560px) {
+	@media only screen and (min-width: 2560px) {
 		& {
     	width: 60%;
   	}

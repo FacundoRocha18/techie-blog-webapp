@@ -1,4 +1,4 @@
-import { StyledContainer, StyledSection, CardTemplate, PostCard, StyledSubtitle, StyledNewsGrid } from 'components'
+import { StyledContainer, StyledSection, CardTemplate, PostCard, StyledSubtitle, StyledGridContainer } from 'components'
 import { usePostsContext } from 'contexts/PostsContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
@@ -11,7 +11,7 @@ export const News = () => {
 			<StyledSubtitle>
 				Noticias recientes
 			</StyledSubtitle>
-			<StyledNewsGrid>
+			<StyledGridContainer>
 				{
 					loading
 						?
@@ -21,7 +21,7 @@ export const News = () => {
 							<PostCard key={post.post_uuid} data={post} />
 						))
 				}
-			</StyledNewsGrid>
+			</StyledGridContainer>
 		</StyledSection>
 	)
 }
