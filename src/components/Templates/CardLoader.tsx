@@ -1,5 +1,4 @@
-import { StyledButton } from 'components/Atoms/Buttons'
-import { StyledContainer } from 'components/Atoms/Containers'
+import { StyledContainer } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import styled from 'styled-components'
