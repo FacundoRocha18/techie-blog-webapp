@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { IPost, ThemeProps } from 'types'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
-import { CImage, StyledContainer, CardBody } from 'components'
-import styled from 'styled-components'
+import { CImage, CardBody } from 'components'
 
 const StyledCard = styled('article')`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
@@ -24,7 +24,18 @@ const StyledCard = styled('article')`
 			align-items: center;
 			background-color: transparent;
 			box-shadow: none;
-			gap: 64px;
+			gap: 32px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+		}
+ 	}
+
+	@media only screen and (min-width: 1920px) {
+		& {
+			align-items: center;
+			background-color: transparent;
+			box-shadow: none;
+			gap: 32px;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(1, 1fr);
 		}

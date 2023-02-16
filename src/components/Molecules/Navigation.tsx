@@ -54,12 +54,6 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		${StyledUList} ${StyledListItem}:nth-child(3) {
 				display: none;
 		}
-		
-		@media (max-width: 768px) {
-			${StyledHeader} & {
-				width: 60%;
-			}	
-		}
 
 		@media only screen and (min-width: 1024px) {
 			${StyledHeader} & {

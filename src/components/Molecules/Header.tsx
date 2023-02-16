@@ -44,7 +44,7 @@ export const StyledHeader = styled('header') <IStyledComponent>`
 		& {
 			grid-template-columns: repeat(12, 1fr);
 			height: fit-content;
-			padding: 8px 16px;
+			padding: 8px 32px;
 		}
 
 		& button {

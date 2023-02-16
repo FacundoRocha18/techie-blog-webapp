@@ -1,6 +1,3 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { ImageProps } from 'types'
 import styled from 'styled-components'
 
 export const CImage = styled('img')`
