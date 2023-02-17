@@ -22,7 +22,7 @@ export const THEMES: Record<ThemeType, Theme> = {
   light: {
     background: Colors.LIGHTGRAY,
 		border: Colors.DARKGRAY,
-    card: Colors.LIGHTGRAY,
+    card: Colors.GRAY,
     color: Colors.DARKGRAY,
 		header: Colors.LIGHTGRAYTRANSLUCENT,
 		placeholders: Colors.MEDIUMSLATE,

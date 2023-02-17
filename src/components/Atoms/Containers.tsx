@@ -14,5 +14,40 @@ export const StyledGridContainer = styled(StyledContainer) <IStyledComponent>`
 `
 
 export const StyledRegisterContainer = styled(StyledContainer) <IStyledComponent>`
-	min-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+
+	@media only screen and (min-width: 768px) {
+		& {
+			padding: 32px;
+			width: 70%;
+  	}
+ 	}
+
+	@media only screen and (min-width: 1080px) {
+		& {
+			padding: 32px;
+			width: 70%;
+  	}
+ 	}
+
+	@media only screen and (min-width: 1440px) {
+		& {
+			padding: 32px;
+			width: 50%;
+  	}
+ 	}
+
+	@media only screen and (min-width: 1920px) {
+		& {
+			padding: 32px;
+    	width: 50%;
+  	}
+ 	}
+
+	@media only screen and (min-width: 2560px) {
+		& {
+    	width: 40%;
+  	}
+ 	}
 `

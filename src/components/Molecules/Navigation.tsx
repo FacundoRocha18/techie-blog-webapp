@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeader, SecondaryLink, ThemeSelector } from 'components'
+import { StyledPrimLink, StyledHeaderContainer, SecondaryLink, ThemeSelector } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -22,7 +22,7 @@ const StyledUList = styled('ul') <IStyledComponent>`
 		gap: 16px;
 		width: 100%;
 		
-		${StyledHeader} & {
+		${StyledHeaderContainer} & {
 			align-items: center;
 			flex-direction: row;
 			gap: 8px;
@@ -39,7 +39,7 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		width: 100%;
 		transition: all .5s ease;
 
-		${StyledHeader} & {
+		${StyledHeaderContainer} & {
 			display: none;
 		}
 	
@@ -55,15 +55,15 @@ const StyledNav = styled('nav') <IStyledComponent>`
 				display: none;
 		}
 
-		@media only screen and (min-width: 1024px) {
-			${StyledHeader} & {
+		@media only screen and (min-width: 1080px) {
+			${StyledHeaderContainer} & {
 				display: flex;
 				grid-column: span 7 / span 7;
 				grid-column-start: 7;
 				width: 100%;
 			}	
 
-			${StyledHeader} & ${StyledUList} ${StyledListItem} {
+			${StyledHeaderContainer} & ${StyledUList} ${StyledListItem} {
 				  border: none;
 			}
 
@@ -71,14 +71,15 @@ const StyledNav = styled('nav') <IStyledComponent>`
 				display: flex;
 			}
 
-			${StyledHeader} & ${StyledUList} ${StyledListItem}:last-child {
+			${StyledHeaderContainer} & ${StyledUList} ${StyledListItem}:last-child {
 					margin-top: 0px;
 					margin-left: 12px;
 			}
+
 		}
 `
 
-export const Navigation = ({ className }: { className?: string }) => {
+export const Navigation = () => {
 	const { theme } = useThemeContext()
 	const { setIsVisible } = useMenuContext()
 

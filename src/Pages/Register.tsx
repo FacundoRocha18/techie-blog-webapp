@@ -42,7 +42,7 @@ export const Register = () => {
 					<PrimaryButton theme={theme}>
 						<p>Registrarse</p>
 					</PrimaryButton>
-					<StyledParagraph>¿Ya tienes un cuenta?</StyledParagraph>
+					<StyledParagraph>¿Ya tienes una cuenta?</StyledParagraph>
 					<TerciaryLink to={'#'}>
 						<p>Inicia sesion aqui</p>
 					</TerciaryLink>
