@@ -38,6 +38,7 @@ export interface IPost {
   theme: string
   author_uuid: string
   author_name: string
+	author_avatar: string
   content: string
   created_at: string
 	image_reference: string

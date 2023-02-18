@@ -10,6 +10,7 @@ export const usePost = (uuid: string, posts: IPost[]) => {
     theme: 'Hardware',
     author_uuid: '816950e8-3e87-4c56-ab6e-4b6af344d003',
     author_name: 'Facundo Rocha',
+    author_avatar: 'https://uacbbrykglstgwrecfde.supabase.co/storage/v1/object/sign/avatars/avatar.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL2F2YXRhci5wbmciLCJpYXQiOjE2NzY3NDc0MjEsImV4cCI6MTcwODI4MzQyMX0.nU6P5XHPh2ixWlm-lBqHWihNp36LSgcq6JGjBPjsbMc&t=2023-02-18T19%3A10%3A21.991Z',
     content:
       'Este año AMD lanzó la séptima generación de procesadores Ryzen, esta generación utiliza la arquitectura Zen 4 y un nuevo socket llamado AM5, de tipo LGA. Con esta nueva generación también vienen nuevos chipsets, concretamente X670E, X670, B650E, B650.',
     created_at: '2022-11-26T02:23:44.806Z',

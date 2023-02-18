@@ -1,6 +1,7 @@
 import { Colors, TextSizes, ThemeNames } from "./Variables"
 
 export interface Theme {
+	accent: string
   background: string
 	border: string
   color: string
@@ -20,6 +21,7 @@ export type ThemeType = 'light' | 'dark'
 
 export const THEMES: Record<ThemeType, Theme> = {
   light: {
+		accent: Colors.PRIMARYACCENT,
     background: Colors.LIGHTGRAY,
 		border: Colors.DARKGRAY,
     card: Colors.GRAY,
@@ -35,6 +37,7 @@ export const THEMES: Record<ThemeType, Theme> = {
 		name: ThemeNames.LIGHT,
   },
   dark: {
+		accent: Colors.PRIMARYACCENT,
     background: Colors.LIGHTBLACK,
 		border: Colors.LIGHTGRAY,
     card: Colors.LIGHTERBLACK,

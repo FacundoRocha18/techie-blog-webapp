@@ -12,7 +12,9 @@ export const fetchPosts = async () => {
 
   const response = await fetch(url, params)
 
-  const { data } = await response.json();
+  const { data } = await response.json()
+
+	console.log(data)
 
   return data
 }

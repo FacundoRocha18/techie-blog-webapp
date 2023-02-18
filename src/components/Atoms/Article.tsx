@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const StyledArticle = styled('article')`
 		display: flex;
 		flex-direction: column;
+		gap: 16px;
 		height: 100%;
 		margin: 0 auto;
 		min-height: 100vh;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { IPost, ThemeProps } from 'types'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
-import { CImage, CardBody } from 'components'
+import { StyledImage, CardBody } from 'components'
 
 const StyledCard = styled('article')`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
@@ -48,7 +48,7 @@ export const PostCard = ({ data }: { data: IPost }) => {
 	return (
 		<StyledCard theme={theme} className='card' color={theme.color}>
 			<a href={`post/${data.post_uuid}`}>
-				<CImage
+				<StyledImage
 					src={data.image_reference}
 					alt={data.title + ', ' + data.theme}
 					height='400px'
