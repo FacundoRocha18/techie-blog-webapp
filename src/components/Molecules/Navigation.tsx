@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { StyledPrimLink, StyledHeaderContainer, SecondaryLink, ThemeSelector } from 'components'
+import { StyledPrimLink, HeaderOuterArea, SecondaryLink, ThemeSelector } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
@@ -22,26 +22,24 @@ const StyledUList = styled('ul') <IStyledComponent>`
 		gap: 16px;
 		width: 100%;
 		
-		${StyledHeaderContainer} & {
-			align-items: center;
-			flex-direction: row;
-			gap: 8px;
-			justify-content: flex-end;
-			width: 100%;
+		@media only screen and (min-width: 1080px) {
+			& {
+				align-items: center;
+				flex-direction: row;
+				gap: 8px;
+				justify-content: flex-end;
+				width: 100%;
+			}
 		}
 `
 
 const StyledNav = styled('nav') <IStyledComponent>`
 		color: var(${({ theme }: ThemeProps) => theme.color});
 		display: flex;
-		height: fit-content;
+		min-height: 100%;
 		overflow: hidden;
 		width: 100%;
 		transition: all .5s ease;
-
-		${StyledHeaderContainer} & {
-			display: none;
-		}
 	
 		${StyledUList} ${StyledListItem} {
 				border-bottom: 1px solid var(${({ theme }: ThemeProps) => theme.color});
@@ -52,30 +50,31 @@ const StyledNav = styled('nav') <IStyledComponent>`
 		}
 
 		${StyledUList} ${StyledListItem}:nth-child(3) {
-				display: none;
+				border: none;
+				padding: 6px 12px;
 		}
 
+		${HeaderOuterArea} & ${StyledUList} ${StyledListItem}:last-child {
+					margin-top: 0px;
+			}
+
 		@media only screen and (min-width: 1080px) {
-			${StyledHeaderContainer} & {
+			${HeaderOuterArea} & {
 				display: flex;
-				grid-column: span 7 / span 7;
+				grid-column: span 6 / span 6;
 				grid-column-start: 7;
 				width: 100%;
 			}	
 
-			${StyledHeaderContainer} & ${StyledUList} ${StyledListItem} {
+			${HeaderOuterArea} & ${StyledUList} ${StyledListItem},
+			${StyledUList} ${StyledListItem}:nth-child(3) {
 				  border: none;
 			}
 
-			${StyledUList} ${StyledListItem}:nth-child(3) {
-				display: flex;
-			}
-
-			${StyledHeaderContainer} & ${StyledUList} ${StyledListItem}:last-child {
+			${HeaderOuterArea} & ${StyledUList} ${StyledListItem}:last-child {
 					margin-top: 0px;
 					margin-left: 12px;
 			}
-
 		}
 `
 
@@ -89,7 +88,7 @@ export const Navigation = () => {
 				<StyledUList>
 					<StyledListItem><SecondaryLink to={'/'} onClick={() => setIsVisible(false)}>Inicio</SecondaryLink></StyledListItem>
 					<StyledListItem><SecondaryLink to={'#'} onClick={() => setIsVisible(false)}>Noticias</SecondaryLink></StyledListItem>
-					<StyledListItem><ThemeSelector /></StyledListItem>
+					<StyledListItem><p>Tema: </p><ThemeSelector /></StyledListItem>
 					<StyledListItem><StyledPrimLink theme={theme} to={'register'} onClick={() => setIsVisible(false)}>Crear una cuenta</StyledPrimLink></StyledListItem>
 				</StyledUList>
 			</StyledNav>

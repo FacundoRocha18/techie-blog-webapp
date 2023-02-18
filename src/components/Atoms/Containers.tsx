@@ -51,3 +51,16 @@ export const StyledRegisterContainer = styled(StyledContainer) <IStyledComponent
   	}
  	}
 `
+
+export const HeaderButtonContainer = styled(StyledContainer)`
+	display: flex;		
+	grid-column: span 2 / span 2;
+	grid-column-start: 3;
+	justify-content: flex-end;
+
+	@media only screen and (min-width: 1080px) {
+		& {
+			display: none;
+		}
+	}
+`

@@ -1,13 +1,11 @@
-import { StyledContainer, ThemeSwitch, StyledPrimLink, Navigation } from 'components'
+import styled from 'styled-components'
+import { ThemeSwitch, Navigation } from 'components'
 import { IStyledComponent } from 'components/components.types'
 import { useMenuContext } from 'contexts/MenuContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
-import styled from 'styled-components'
-import { ThemeProps } from 'types'
 
 const StyledMenuContainer = styled('div') <IStyledComponent>`
 	align-items: center;
-	background-color: var(${({ theme }: ThemeProps) => theme.header});
 	flex-direction: column;
 	display: flex;
 	gap: 16px;
@@ -16,7 +14,6 @@ const StyledMenuContainer = styled('div') <IStyledComponent>`
 	padding: 16px;
 	width: 100%;
 	transition: all .3s ease;
-
 
 	&.active .theme-toggle-container {
 		opacity: 1;
@@ -31,6 +28,12 @@ const StyledMenuContainer = styled('div') <IStyledComponent>`
 	@media only screen and (min-width: 768px) {
 		& {
 			padding: 8px 32px;
+		}
+	}
+
+	@media only screen and (min-width: 1080px) {
+		& {
+			display: none;
 		}
 	}
 `
@@ -70,10 +73,10 @@ export const Menu = () => {
 		<>
 			<StyledMenuContainer theme={theme} className={`${isVisible ? 'active' : 'inactive'}`}>
 				<Navigation />
-				<SwitchContainer >
+				{/* <SwitchContainer >
 					<p>Tema: </p>
 					<ThemeSwitch />
-				</SwitchContainer>
+				</SwitchContainer> */}
 			</StyledMenuContainer>
 		</>
 	)
