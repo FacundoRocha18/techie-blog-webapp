@@ -7,7 +7,7 @@ import { IStyledComponent } from 'components/components.types'
 import { ThemeProps } from 'types'
 
 export const HeaderOuterArea = styled('header') <IStyledComponent>`
-	align-items: flex-start;
+	align-items: center;
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	background-color: var(${({ theme }) => theme.background});
@@ -16,7 +16,7 @@ export const HeaderOuterArea = styled('header') <IStyledComponent>`
 	flex-direction: column;
 	left: 0;
 	height: fit-content;
-	padding: 8px 16px;
+	padding: 16px;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -28,7 +28,7 @@ export const HeaderOuterArea = styled('header') <IStyledComponent>`
 	}
 
 	&.inactive {
-		height: 148px;
+		height: 116px;
 	}
 
 	@media only screen and (min-width: 768px) {
@@ -41,6 +41,10 @@ export const HeaderOuterArea = styled('header') <IStyledComponent>`
 		& {
 			align-items: center;
 		}
+
+		&.inactive {
+		height: 148px;
+	}
 	}
 `
 

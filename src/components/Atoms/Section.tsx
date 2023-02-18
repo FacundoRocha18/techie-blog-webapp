@@ -10,7 +10,7 @@ export const StyledSection = styled('section') <IStyledComponent>`
 	gap: 16px;
 	padding: 16px;
 	min-height: 100vh;
-	padding-top: 100px;
+	margin-top: 148px;
 	width: 100%;
 
 	& > h2 {
