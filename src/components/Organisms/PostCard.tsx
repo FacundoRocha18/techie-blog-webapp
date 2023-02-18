@@ -49,9 +49,9 @@ export const PostCard = ({ data }: { data: IPost }) => {
 		<StyledCard theme={theme} className='card' color={theme.color}>
 			<a href={`post/${data.post_uuid}`}>
 				<CImage
-					src='https://images.macrumors.com/t/lyB4c1iPX6XBNTsqFd19N14goLQ=/2672x/article-new/2022/08/14-vs-16-inch-mbp-m2-pro-and-max-feature-1.jpg'
-					alt='Apple Macbook Pro M2 Pro'
-					height='100%'
+					src={data.image_reference}
+					alt={data.title + ', ' + data.theme}
+					height='400px'
 				/>
 			</a>
 			<CardBody data={data} />

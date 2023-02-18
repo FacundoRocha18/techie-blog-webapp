@@ -14,8 +14,8 @@ export const PostBody = ({ post }: { post: IPost }) => {
 	return (
 		<StyledBodyContainer>
 			<CImage
-				src='https://www.amd.com/system/files/styles/600px/private/2022-11/1761310-amd-ryzen-9-7000-series-PIB-angle-1260x709.png?itok=_NVpbZqF'
-				alt='AMD Ryzen 7000 series'
+				src={post.image_reference}
+				alt={post.title + ', ' + post.theme}
 				height='h-auto'
 				width='w-3/4'
 			/>

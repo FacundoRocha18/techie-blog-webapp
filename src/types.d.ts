@@ -40,6 +40,7 @@ export interface IPost {
   author_name: string
   content: string
   created_at: string
+	image_reference: string
 }
 
 export interface ChildrenProps {
