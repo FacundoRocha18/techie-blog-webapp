@@ -12,7 +12,8 @@ export const usePost = (uuid: string, posts: IPost[]) => {
     author_name: 'Facundo Rocha',
     content:
       'Este año AMD lanzó la séptima generación de procesadores Ryzen, esta generación utiliza la arquitectura Zen 4 y un nuevo socket llamado AM5, de tipo LGA. Con esta nueva generación también vienen nuevos chipsets, concretamente X670E, X670, B650E, B650.',
-    created_at: '2022-11-26T02:23:44.806Z'
+    created_at: '2022-11-26T02:23:44.806Z',
+		image_reference: 'https://uacbbrykglstgwrecfde.supabase.co/storage/v1/object/sign/images/1536834-amd-ryzen-7000-series-beauty-1260x709_0.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvMTUzNjgzNC1hbWQtcnl6ZW4tNzAwMC1zZXJpZXMtYmVhdXR5LTEyNjB4NzA5XzAud2VicCIsImlhdCI6MTY3NjY5MjE1MiwiZXhwIjoxNzA4MjI4MTUyfQ.yC76vWt8b2ibC-h-LOSKaV1EJMU5lpLrLxT_h6qLv54&t=2023-02-18T03%3A49%3A13.019Z'
   })
 
   useEffect(() => {
