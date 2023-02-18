@@ -8,9 +8,10 @@ export const StyledSection = styled('section') <IStyledComponent>`
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	justify-content: center; 
 	padding: 16px;
 	min-height: 100vh;
-	margin-top: 148px;
+	height: fit-content;
 	width: 100%;
 
 	& > h2 {

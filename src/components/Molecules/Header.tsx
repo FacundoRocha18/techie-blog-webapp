@@ -17,7 +17,7 @@ export const HeaderOuterArea = styled('header') <IStyledComponent>`
 	left: 0;
 	height: fit-content;
 	padding: 16px;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100%;
 	z-index: 50;
