@@ -32,6 +32,7 @@ export * from './Atoms/ThemeSelector'
 export * from './Atoms/MenuButton'
 export * from './Atoms/Icon'
 export * from './Atoms/Article'
+export * from './Atoms/Sidebar'
 export * from './Atoms/Decorators'
 
 

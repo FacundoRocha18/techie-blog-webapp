@@ -1,6 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledArticle = styled('article')`
+		align-items: center;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
