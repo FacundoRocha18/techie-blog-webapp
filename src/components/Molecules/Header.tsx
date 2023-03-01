@@ -156,7 +156,7 @@ export const Header = () => {
 			<HeaderOuterArea className={isActiveClass}>
 				<HeaderInnerArea theme={theme}>
 					<Link to={'/'} className='header-title' onClick={() => setIsVisible(false)}>
-						<StyledTitle>Techie blog</StyledTitle>
+						<StyledTitle>TechieBlog</StyledTitle>
 					</Link>
 					<HeaderButtonContainer>
 						<MenuToggle />

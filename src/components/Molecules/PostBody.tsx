@@ -14,21 +14,9 @@ const StyledBodyContainer = styled('div')`
 				width: 90%;
 			}
 	}
-
-	@media only screen and (min-width: 1024px) {
-			& {
-				width: 100%;
-			}
-	}
 `
 const StyledBodyParagraph = styled('p')`
-	font-size: 2rem;
-
-	@media only screen and (min-width: 1024px) {
-			& {
-				font-size: 2.3rem;
-			}
-	}
+	width: 70%;
 `
 
 export const PostBody = ({ post }: { post: IPost }) => {
@@ -41,7 +29,7 @@ export const PostBody = ({ post }: { post: IPost }) => {
 				Nunc a elit justo. Sed vel lectus est. Etiam aliquet, nisl in tempus varius, magna sem fringilla nulla, eu laoreet elit urna et nulla. Sed tellus purus, malesuada a neque ut, porttitor semper nunc. In efficitur, elit interdum malesuada pharetra, lectus sem vulputate nisi, non euismod mauris orci sit amet turpis. Ut iaculis lectus ut lorem fringilla, ut vestibulum elit pulvinar. Nulla convallis vitae lectus vel vulputate. Fusce sit amet tortor ac ipsum scelerisque fringilla sit amet eget felis. Aenean id leo lobortis, consequat nisi eu, congue dolor. Nunc volutpat sapien et nunc varius bibendum. Praesent hendrerit fermentum ligula, varius pretium urna pellentesque vitae. Nullam et nunc lobortis, consequat libero nec, eleifend urna.
 			</StyledBodyParagraph>
 			<StyledImage
-				src={post.image_reference}
+				src={'https://uacbbrykglstgwrecfde.supabase.co/storage/v1/object/sign/images/ryzen%207000.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvcnl6ZW4gNzAwMC5qcGciLCJpYXQiOjE2Nzc2OTY0OTksImV4cCI6MTcwOTIzMjQ5OX0.Ol2O2kmyFW7wKukZOBgYOdftooQBFrOmhXrwIU7gyx8&t=2023-03-01T18%3A48%3A19.484Z'}
 				alt={post.title + ', ' + post.theme}
 				height='100%'
 				width='100%'

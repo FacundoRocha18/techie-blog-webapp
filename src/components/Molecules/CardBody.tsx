@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledPrimLink, StyledTitle, TextDecorator } from 'components'
+import { AuthorAvatar, AuthorContainer, AuthorName, AuthorTag, StyledPrimLink, StyledTitle, TextDecorator } from 'components'
 import { Link } from 'react-router-dom'
 import { IPost, ThemeProps } from 'types'
 import styled from 'styled-components'
@@ -10,10 +10,15 @@ const StyledCardBody = styled('div')`
 	display: grid;
 	gap: 16px 0px;
 	grid-template-columns: repeat(1, 1fr);
-	grid-template-rows: repeat(3, auto);
+	grid-template-rows: repeat(2, auto);
 	height: fit-content;
 	padding: 16px;
 
+	@media (min-width: 768px) {
+  	& {
+			grid-template-rows: repeat(3, auto);
+  	}
+	}
 
 	@media only screen and (min-width: 1024px) {
 		& {
@@ -33,6 +38,7 @@ const StyledContentParagraph = styled('div')`
 	grid-row: span 1 / span 1;
 	grid-row-start: 3;
 	position: relative;
+	display: none;
 
 	@media (min-width: 768px) {
   	& {
@@ -61,13 +67,6 @@ const StyledContentParagraph = styled('div')`
  	}
 `
 
-const StyledAuthorParagraph = styled('p')`
-	grid-column: span 1 / span 1;
-	grid-row: span 1 / span 1;
-	grid-row-start: 2;
-	align-self: flex-start;
-`
-
 export const CardBody = ({ data }: { data: IPost }) => {
 	const { theme } = useThemeContext()
 
@@ -76,9 +75,11 @@ export const CardBody = ({ data }: { data: IPost }) => {
 			<Link to={`post/${data.post_uuid}`}>
 				<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
 			</Link>
-			<StyledAuthorParagraph>
-				Autor: <TextDecorator>{data.author_name}</TextDecorator>
-			</StyledAuthorParagraph>
+			<AuthorContainer>
+				<AuthorAvatar src={data.author_avatar} />
+				<AuthorName>{data.author_name}</AuthorName>
+				<AuthorTag theme={theme}>Autor</AuthorTag>
+			</AuthorContainer>
 			<StyledContentParagraph theme={theme}>
 				<p>
 					{data.content}

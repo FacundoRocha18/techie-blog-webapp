@@ -15,6 +15,7 @@ export * from './Molecules/CardBody'
 export * from './Molecules/Overlay'
 export * from './Molecules/Menu'
 export * from './Molecules/Navigation'
+export * from './Molecules/AuthorInfo'
 
 // Atoms
 export * from './Atoms/Buttons'

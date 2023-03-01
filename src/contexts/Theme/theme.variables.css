@@ -20,17 +20,17 @@
 
 	/* Start of text sizes */
 
-	--body-text: 1.5rem;
-	--heading-text: 2.1rem;
-	--subheading-text: 1.8rem;
+	--heading-text: 22px;
+	--subheading-text: 20px;
+	--body-text: 18px;
 
 	/* End of text sizes */
 
 	/* Start of text weights */
 
 	--heading-weight: 500;
-	--subheading-weight: 300;
-	--body-weight: 400;
+	--subheading-weight: 400;
+	--body-weight: 300;
 
 	/* End of text weights */
 
@@ -50,8 +50,8 @@
 
 @media (min-width: 1080px) {
 	:root {
-		--body-text: 1.8rem;
-		--heading-text: 3.5rem;
-		--subheading-text: 3rem;
+		--heading-text: 26px;
+		--subheading-text: 24px;
+		--body-text: 20px;
 	}
 }
