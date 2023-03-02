@@ -15,18 +15,25 @@ const StyledPostHeading = styled('section')`
 
 const DateContainer = styled('div')`
 	& p {
-		font-size: 14px;
+		font-size: 18px;
 	}
 `
 
 const InfoContainer = styled('div')`
-	align-items: center;
 	background-color: var(--gray-300);
 	border-radius: 4px;
 	display: flex;
+	flex-direction: column;
 	gap: 16px;
 	justify-content: space-between;
-	padding: 26px;
+	padding: 16px;
+
+	@media only screen and (min-width: 768px) {
+		& {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
 `
 
 export const PostHeading = ({ post }: { post: IPost }) => {

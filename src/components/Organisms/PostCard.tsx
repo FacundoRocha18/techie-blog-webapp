@@ -51,7 +51,6 @@ export const PostCard = ({ data }: { data: IPost }) => {
 				<StyledImage
 					src={data.image_reference}
 					alt={data.title + ', ' + data.theme}
-					height='400px'
 				/>
 			</a>
 			<CardBody data={data} />
