@@ -2,7 +2,7 @@ import { StyledImage, StyledTitle, AuthorAvatar, AuthorName, AuthorTag, AuthorCo
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { IPost } from 'types'
+import { IPost, ThemeProps } from 'types'
 
 const StyledPostHeading = styled('section')`
 	display: flex;
@@ -20,7 +20,7 @@ const DateContainer = styled('div')`
 `
 
 const InfoContainer = styled('div')`
-	background-color: var(--gray-300);
+	background-color: var(${({ theme }: ThemeProps) => theme.card});
 	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
@@ -48,15 +48,15 @@ export const PostHeading = ({ post }: { post: IPost }) => {
 				height='100%'
 				width='100%'
 			/>
-			<InfoContainer>
+			<InfoContainer theme={theme}>
 				<AuthorContainer>
 					<AuthorAvatar src={post.author_avatar} />
 					<AuthorName>{post.author_name}</AuthorName>
 					<AuthorTag theme={theme}>Autor</AuthorTag>
 				</AuthorContainer>
-				<DateContainer>
+				{/* <DateContainer>
 					<p>Subido el {post.created_at}</p>
-				</DateContainer>
+				</DateContainer> */}
 			</InfoContainer>
 		</StyledPostHeading>
 	)
