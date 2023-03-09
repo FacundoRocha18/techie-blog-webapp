@@ -1,4 +1,4 @@
-import { StyledImage, StyledTitle, AuthorAvatar, AuthorName, AuthorTag, AuthorContainer } from 'components'
+import { StyledImage, StyledTitle, AuthorAvatar, AuthorName, AuthorTag, Author } from 'components'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -49,11 +49,11 @@ export const PostHeading = ({ post }: { post: IPost }) => {
 				width='100%'
 			/>
 			<InfoContainer theme={theme}>
-				<AuthorContainer>
+				<Author>
 					<AuthorAvatar src={post.author_avatar} />
 					<AuthorName>{post.author_name}</AuthorName>
 					<AuthorTag theme={theme}>Autor</AuthorTag>
-				</AuthorContainer>
+				</Author>
 				{/* <DateContainer>
 					<p>Subido el {post.created_at}</p>
 				</DateContainer> */}

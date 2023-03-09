@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AuthorAvatar, AuthorContainer, AuthorName, AuthorTag, StyledPrimLink, StyledTitle, TextDecorator } from 'components'
+import { AuthorAvatar, Author, AuthorName, AuthorTag, StyledPrimLink, StyledTitle, TextDecorator } from 'components'
 import { Link } from 'react-router-dom'
 import { IPost, ThemeProps } from 'types'
 import styled from 'styled-components'
@@ -14,7 +14,7 @@ const StyledCardBody = styled('div')`
 	height: fit-content;
 	padding: 16px;
 
-	@media (min-width: 768px) {
+	@media only screen and (min-width: 768px) {
   	& {
 			grid-template-rows: repeat(3, auto);
   	}
@@ -36,11 +36,11 @@ const StyledCardBody = styled('div')`
 const StyledContentParagraph = styled('div')`
 	grid-column: span 2 / span 2;
 	grid-row: span 1 / span 1;
-	grid-row-start: 3;
+	grid-row-start: 2;
 	position: relative;
 	display: none;
 
-	@media (min-width: 768px) {
+	@media only screen and (min-width: 768px) {
   	& {
     	display: inline;
   	}
@@ -67,6 +67,17 @@ const StyledContentParagraph = styled('div')`
  	}
 `
 
+const AuthorContainer = styled('div')`
+	grid-column-start: 1;
+	grid-row-start: 2;
+
+	@media only screen and (min-width: 768px) {
+  	& {
+			grid-row-start: 3;
+  	}
+	}
+`
+
 export const CardBody = ({ data }: { data: IPost }) => {
 	const { theme } = useThemeContext()
 
@@ -75,16 +86,18 @@ export const CardBody = ({ data }: { data: IPost }) => {
 			<Link to={`post/${data.post_uuid}`}>
 				<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
 			</Link>
-			<AuthorContainer>
-				<AuthorAvatar src={data.author_avatar} />
-				<AuthorName>{data.author_name}</AuthorName>
-				<AuthorTag theme={theme}>Autor</AuthorTag>
-			</AuthorContainer>
 			<StyledContentParagraph theme={theme}>
 				<p>
 					{data.content}
 				</p>
 			</StyledContentParagraph>
+			<AuthorContainer>
+				<Author>
+					<AuthorAvatar src={data.author_avatar} />
+					<AuthorName>{data.author_name}</AuthorName>
+					<AuthorTag theme={theme}>Autor</AuthorTag>
+				</Author>
+			</AuthorContainer>
 		</StyledCardBody>
 	)
 }

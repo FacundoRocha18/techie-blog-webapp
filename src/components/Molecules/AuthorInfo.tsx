@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ThemeProps } from 'types'
 
-export const AuthorContainer = styled('div')`
+export const Author = styled('div')`
 	align-items: center;
 	display: grid;
 	gap: 16px;
@@ -12,8 +12,15 @@ export const AuthorContainer = styled('div')`
 export const AuthorAvatar = styled('img')`
 	border-radius: 100%;
 	grid-column: span 1 / span 1;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
+
+	@media only screen and (min-width: 768px) {
+  	& {
+			height: 55px;
+			width: 55px;
+  	}
+	}
 `
 
 export const AuthorName = styled('p')`
