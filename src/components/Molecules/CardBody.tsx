@@ -1,6 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { AuthorAvatar, Author, AuthorName, AuthorTag, StyledPrimLink, StyledTitle, TextDecorator } from 'components'
+import { AuthorAvatar, Author, AuthorName, AuthorTag, StyledPrimLink, StyledTitle } from 'components'
 import { Link } from 'react-router-dom'
 import { IPost, ThemeProps } from 'types'
 import styled from 'styled-components'
@@ -12,7 +11,7 @@ const StyledCardBody = styled('div')`
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(2, auto);
 	height: fit-content;
-	padding: 16px;
+	padding: 12px;
 
 	@media only screen and (min-width: 768px) {
   	& {
@@ -91,13 +90,7 @@ export const CardBody = ({ data }: { data: IPost }) => {
 					{data.content}
 				</p>
 			</StyledContentParagraph>
-			<AuthorContainer>
-				<Author>
-					<AuthorAvatar src={data.author_avatar} />
-					<AuthorName>{data.author_name}</AuthorName>
-					<AuthorTag theme={theme}>Autor</AuthorTag>
-				</Author>
-			</AuthorContainer>
+			
 		</StyledCardBody>
 	)
 }

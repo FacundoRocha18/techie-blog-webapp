@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { IPost, ThemeProps } from 'types'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
-import { StyledImage, CardBody, Author, AuthorAvatar, AuthorName, AuthorTag } from 'components'
+import { StyledImage, CardBody, Author, AuthorAvatar, AuthorName } from 'components'
 
 const StyledCard = styled('article')`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
@@ -15,6 +15,7 @@ const StyledCard = styled('article')`
 	min-height: 325px;
 
 	& > a img {
+		border-radius: 0px;
 		width: 100%;
 		max-height: 250px;
 	}
@@ -54,11 +55,10 @@ export const PostCard = ({ data }: { data: IPost }) => {
 
 	return (
 		<StyledCard theme={theme} className='card' color={theme.color}>
-			{/* <Author>
+			<Author>
 				<AuthorAvatar src={data.author_avatar} />
 				<AuthorName>{data.author_name}</AuthorName>
-				<AuthorTag theme={theme}>Autor</AuthorTag>
-			</Author> */}
+			</Author>
 			<a href={`post/${data.post_uuid}`}>
 				<StyledImage
 					src={data.image_reference}

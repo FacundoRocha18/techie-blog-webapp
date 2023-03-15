@@ -6,6 +6,7 @@ export const Author = styled('div')`
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(3, auto);
+	padding: 12px;
 	width: fit-content;
 `
 
