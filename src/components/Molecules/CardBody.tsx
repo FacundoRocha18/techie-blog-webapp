@@ -10,6 +10,7 @@ const StyledCardBody = styled('div')`
 	gap: 16px 0px;
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: repeat(2, auto);
+	grid-column: span 2 / span 2;
 	height: fit-content;
 	padding: 12px;
 
@@ -33,11 +34,12 @@ const StyledCardBody = styled('div')`
 `
 
 const StyledContentParagraph = styled('div')`
+	color: #9b9999;
+	display: none;
 	grid-column: span 2 / span 2;
 	grid-row: span 1 / span 1;
 	grid-row-start: 2;
 	position: relative;
-	display: none;
 
 	@media only screen and (min-width: 768px) {
   	& {
@@ -68,11 +70,11 @@ const StyledContentParagraph = styled('div')`
 
 const AuthorContainer = styled('div')`
 	grid-column-start: 1;
-	grid-row-start: 2;
+	grid-row-start: 1;
 
 	@media only screen and (min-width: 768px) {
   	& {
-			grid-row-start: 3;
+			grid-row-start: 1;
   	}
 	}
 `
@@ -82,15 +84,22 @@ export const CardBody = ({ data }: { data: IPost }) => {
 
 	return (
 		<StyledCardBody>
-			<Link to={`post/${data.post_uuid}`}>
-				<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
-			</Link>
+			<AuthorContainer>
+				<Author>
+					<AuthorAvatar src={data.author_avatar} />
+					<div>
+						<Link to={`post/${data.post_uuid}`}>
+							<StyledTitle aria-rowspan={1} aria-colspan={1}>{data.title}</StyledTitle>
+						</Link>
+						<AuthorName>{data.author_name}</AuthorName>
+					</div>
+				</Author>
+			</AuthorContainer>
 			<StyledContentParagraph theme={theme}>
 				<p>
 					{data.content}
 				</p>
 			</StyledContentParagraph>
-			
 		</StyledCardBody>
 	)
 }

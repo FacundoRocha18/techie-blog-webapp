@@ -6,7 +6,6 @@ export const Author = styled('div')`
 	display: grid;
 	gap: 16px;
 	grid-template-columns: repeat(3, auto);
-	padding: 12px;
 	width: fit-content;
 `
 
@@ -18,13 +17,14 @@ export const AuthorAvatar = styled('img')`
 
 	@media only screen and (min-width: 768px) {
   	& {
-			height: 55px;
-			width: 55px;
+			height: 60px;
+			width: 60px;
   	}
 	}
 `
 
 export const AuthorName = styled('p')`
+	color: #9b9999;
 	grid-column: span 1 / span 1;
 `
 

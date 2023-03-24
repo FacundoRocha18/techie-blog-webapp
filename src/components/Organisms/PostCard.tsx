@@ -7,7 +7,7 @@ import { StyledImage, CardBody, Author, AuthorAvatar, AuthorName } from 'compone
 const StyledCard = styled('article')`
 	background-color: var(${({ theme }: ThemeProps) => theme.card});
 	box-shadow: var(${({ theme }: ThemeProps) => theme.name === 'light' ? '--dark-shadow' : 'translucent'});
-	border-radius: 4px;
+	border-radius: 8px;
 	color: var(${props => props.color});
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -23,7 +23,6 @@ const StyledCard = styled('article')`
 	@media only screen and (min-width: 768px) {
   	& > a img {
 			width: 100%;
-			max-height: 400px;
 		}
 	}
 
@@ -33,8 +32,12 @@ const StyledCard = styled('article')`
 			background-color: transparent;
 			box-shadow: none;
 			gap: 32px;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(1, 1fr);
+		}
+
+		& > a img {
+			border-radius: 8px;
 		}
  	}
 
@@ -44,7 +47,7 @@ const StyledCard = styled('article')`
 			background-color: transparent;
 			box-shadow: none;
 			gap: 32px;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(1, 1fr);
 		}
  	}
@@ -55,10 +58,6 @@ export const PostCard = ({ data }: { data: IPost }) => {
 
 	return (
 		<StyledCard theme={theme} className='card' color={theme.color}>
-			<Author>
-				<AuthorAvatar src={data.author_avatar} />
-				<AuthorName>{data.author_name}</AuthorName>
-			</Author>
 			<a href={`post/${data.post_uuid}`}>
 				<StyledImage
 					src={data.image_reference}
