@@ -4,7 +4,7 @@ export interface IThemeContext {
   theme: Theme
   themeName: string
   toggleTheme: VoidFunction
-	changeTheme: Function
+  changeTheme: Function
 }
 
 interface IPostsContext {
@@ -13,8 +13,8 @@ interface IPostsContext {
 }
 
 export interface ThemeProps {
-	theme: Theme
-} 
+  theme: Theme
+}
 
 export interface IReaction {
   reactionId: number
@@ -38,10 +38,10 @@ export interface IPost {
   theme: string
   author_uuid: string
   author_name: string
-	author_avatar: string
+  author_avatar: string
   content: string
   created_at: string
-	image_reference: string
+  image_reference: string
 }
 
 export interface ChildrenProps {

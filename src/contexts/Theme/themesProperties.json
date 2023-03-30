@@ -1,0 +1,22 @@
+{
+	"theme": [
+		{
+			"light": {
+				"accent": "--lighter-black",
+				"background": "--light-black",
+				"border": "--black",
+				"card": "--black-translucent",
+				"color": "",
+				"header": "",
+				"placeholders": "",
+				"translucent": "",
+				"headingSize": "",
+				"subheadingSize": "",
+				"bodySize": "",
+				"inputSize": "",
+				"inputColor": "",
+				"name": "light"
+			}
+		}
+	]
+}

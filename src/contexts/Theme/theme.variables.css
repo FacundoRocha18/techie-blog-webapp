@@ -1,57 +1,56 @@
 :root {
+  /* Start of colors */
 
-	/* Start of colors */
+  --lighter-black: rgb(20, 21, 29);
+  --light-black: rgb(16, 17, 23);
+  --black: rgb(19, 19, 19);
+  --black-translucent: rgba(19, 19, 19, 0.75);
+  --white: rgb(255, 255, 255);
+  --gray-translucent: rgba(255, 255, 255, 0.75);
+	--light-gray: rgb(184, 184, 184);
+  --gray-300: rgb(229, 230, 232);
+  --gray-900: rgb(17 24 39);
+  --zinc-700: rgba(34, 34, 38, 0.95);
+  --zinc-800: rgb(29, 29, 32);
+  --slate-400: rgb(148 163 184);
+  --primary-accent: rgb(236 72 153);
+  --translucent: rgb(0 0 0 0);
 
-	--lighter-black: rgb(20, 21, 29);
-	--light-black: rgb(16, 17, 23);
-	--black: rgb(19, 19, 19);
-	--black-translucent: rgba(19, 19, 19, 0.75);
-	--gray-100: rgb(255, 255, 255);
-	--gray-translucent: rgba(255, 255, 255, 0.75);
-	--gray-300: rgb(229, 230, 232);
-	--gray-900: rgb(17 24 39);
-	--zinc-700: rgba(34, 34, 38, 0.95);
-	--zinc-800: rgb(29, 29, 32);
-	--slate-400: rgb(148 163 184);
-	--primary-accent: rgb(236 72 153);
-	--translucent: rgb(0 0 0 0);
+  /* End of colors */
 
-	/* End of colors */
+  /* Start of text sizes */
 
-	/* Start of text sizes */
+  --heading-text: 22px;
+  --subheading-text: 20px;
+  --body-text: 18px;
 
-	--heading-text: 22px;
-	--subheading-text: 20px;
-	--body-text: 18px;
+  /* End of text sizes */
 
-	/* End of text sizes */
+  /* Start of text weights */
 
-	/* Start of text weights */
+  --heading-weight: 500;
+  --subheading-weight: 400;
+  --body-weight: 300;
 
-	--heading-weight: 500;
-	--subheading-weight: 400;
-	--body-weight: 300;
+  /* End of text weights */
 
-	/* End of text weights */
+  --dark-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
-	--dark-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  /* Start of devices sizes */
 
-	/* Start of devices sizes */
+  --tablet-vw: 768px;
 
-	--tablet-vw: 768px;
+  --desktop-s-vw: 768px;
+  --desktop-m-vw: 1080px;
+  --desktop-l-vw: 1440px;
 
-	--desktop-s-vw: 768px;
-	--desktop-m-vw: 1080px;
-	--desktop-l-vw: 1440px;
-
-	/* End of devices sizes */
-
+  /* End of devices sizes */
 }
 
 @media (min-width: 1080px) {
-	:root {
-		--heading-text: 26px;
-		--subheading-text: 24px;
-		--body-text: 20px;
-	}
+  :root {
+    --heading-text: 26px;
+    --subheading-text: 24px;
+    --body-text: 20px;
+  }
 }

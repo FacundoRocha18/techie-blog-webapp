@@ -3,7 +3,7 @@ import { createContextCustom } from 'hooks'
 import { ChildrenProps } from 'types'
 
 interface IMenuContext {
-	isVisible: boolean
+  isVisible: boolean
   isActiveClass: string
   setIsVisible: Function
 }
@@ -13,7 +13,9 @@ export const [useMenuContext, ContextProvider] = createContextCustom<IMenuContex
 export const MenuProvider = ({ children }: ChildrenProps) => {
   const [isVisible, setIsVisible] = useState(false)
 
-	const isActiveClass = isVisible === true ? 'active' : 'inactive'
+  const isActiveClass = isVisible === true ? 'active' : 'inactive'
 
-  return <ContextProvider value={{ isVisible, isActiveClass, setIsVisible }}>{children}</ContextProvider>
+  return (
+    <ContextProvider value={{ isVisible, isActiveClass, setIsVisible }}>{children}</ContextProvider>
+  )
 }

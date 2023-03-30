@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { createContextCustom, useLocalStorage } from 'hooks'
-import { IThemeContext, ChildrenProps } from 'types'
 import { THEMES, ThemeType } from './Themes.declaration'
+import { IThemeContext, ChildrenProps } from 'shared'
 
 export const [useThemeContext, ContextProvider] = createContextCustom<IThemeContext>()
 
@@ -27,13 +27,13 @@ export const ThemeProvider = ({ children }: ChildrenProps) => {
 
   const toggleTheme = () => setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
 
-	const changeTheme = (newTheme: ThemeType): void => setCurrentTheme(newTheme)
+  const changeTheme = (newTheme: ThemeType): void => setCurrentTheme(newTheme)
 
   const providerValue: IThemeContext = {
     theme: THEMES[currentTheme],
     themeName: currentTheme,
     toggleTheme,
-		changeTheme
+    changeTheme,
   }
 
   return <ContextProvider value={providerValue}>{children}</ContextProvider>

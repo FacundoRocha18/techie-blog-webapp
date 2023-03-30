@@ -4,32 +4,32 @@ import { fetchPostsFromSupabase } from 'services/SupabaseAPI/FetchPostsFromSupab
 import { IPost } from 'types'
 
 export const useFetchPosts = () => {
-	const [posts, setPosts] = useState<IPost[]>([])
-	const [loading, setLoading] = useState(false)
-	const [error, setError] = useState('Sin errores')
+  const [posts, setPosts] = useState<IPost[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('Sin errores')
 
-	const getPosts = async () => {
-		try {
-			setLoading(true)
-			const data = await fetchPostsFromSupabase()
-			
-			if (!data) throw new Error('No se pudo recuperar los datos')
+  const getPosts = async () => {
+    try {
+      setLoading(true)
+      const data = await fetchPostsFromSupabase()
 
-			setPosts(data)
-		} catch (err: any) {
-			setError(err.message)
-			alert('Algo parece haber salido mal: \n' + err)
-		} finally {
-			setLoading(false)
-		}
-	}
+      if (!data) throw new Error('No se pudo recuperar los datos')
 
-	const shouldFetch = useRef(true)
-	useEffect(() => {
-		if (shouldFetch.current) {
-			getPosts()
-		}
-	}, [])
+      setPosts(data)
+    } catch (err: any) {
+      setError(err.message)
+      alert('Algo parece haber salido mal: \n' + err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
-	return [posts, loading] as const
-} 
+  const shouldFetch = useRef(true)
+  useEffect(() => {
+    if (shouldFetch.current) {
+      getPosts()
+    }
+  }, [])
+
+  return [posts, loading] as const
+}

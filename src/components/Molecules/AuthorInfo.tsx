@@ -1,37 +1,37 @@
 import styled from 'styled-components'
-import { ThemeProps } from 'types'
+import { ThemeProps } from 'shared'
 
 export const Author = styled('div')`
-	align-items: center;
-	display: grid;
-	gap: 16px;
-	grid-template-columns: repeat(3, auto);
-	width: fit-content;
+  align-items: center;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, auto);
+  width: fit-content;
 `
 
 export const AuthorAvatar = styled('img')`
-	border-radius: 100%;
-	grid-column: span 1 / span 1;
-	height: 40px;
-	width: 40px;
+  border-radius: 100%;
+  grid-column: span 1 / span 1;
+  height: 40px;
+  width: 40px;
 
-	@media only screen and (min-width: 768px) {
-  	& {
-			height: 60px;
-			width: 60px;
-  	}
-	}
+  @media only screen and (min-width: 768px) {
+    & {
+      height: 60px;
+      width: 60px;
+    }
+  }
 `
 
 export const AuthorName = styled('p')`
-	color: #9b9999;
-	grid-column: span 1 / span 1;
+  color: #b8b8b8;
+  grid-column: span 1 / span 1;
 `
 
 export const AuthorTag = styled('span')`
-	background-color: var(${({ theme }: ThemeProps) => theme.accent});
-	border-radius: 4px;
-	grid-column: span 1 / span 1;
-	font-size: 16px;
-	padding: 2px 6px;
+  background-color: var(${({ theme }: ThemeProps) => theme.accent});
+  border-radius: 4px;
+  grid-column: span 1 / span 1;
+  font-size: 16px;
+  padding: 2px 6px;
 `

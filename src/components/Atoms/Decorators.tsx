@@ -1,5 +1,5 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const TextDecorator = styled('span')`
-	color: var(--primary-accent);
+  color: var(--primary-accent);
 `

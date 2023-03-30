@@ -12,7 +12,6 @@
 		"lint": "eslint src/**/*.{ts,tsx,json,jsx,js}",
 		"lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
 		"format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc --ignore-path vite-env.d.ts",
-		"tail": "npx tailwindcss -i src/styles/input.css -o ./dist/output.css --watch",
 		"commit": "npm run format && git cmp '$@'"
 	},
 	"dependencies": {
