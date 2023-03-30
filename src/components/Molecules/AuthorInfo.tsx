@@ -23,6 +23,9 @@ export const AuthorAvatar = styled('img')`
   }
 `
 
+/**
+ * TODO: Create new username feature on database, API and frontend. I.E.: an user named Facundo Rocha, the username could look like "@facurocha" or "@facurocha18". It can be created by the user (checking that is available) or the API will create a default one based on the user's full name.
+ */
 export const AuthorName = styled('p')`
   color: #b8b8b8;
   grid-column: span 1 / span 1;
