@@ -96,7 +96,7 @@ export const CardBody = ({ data }: { data: IPost }) => {
               </StyledTitle>
             </Link>
             <AuthorName>
-              <a href='#'>@{data.author_name}</a>
+              <a href='#'>@{data.author_name.replace(' ', '').toLowerCase()}</a>
             </AuthorName>
           </div>
         </Author>
