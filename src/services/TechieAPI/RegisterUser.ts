@@ -1,4 +1,9 @@
-export const RegisterUser = async (name: string, username: string | null, email: string, password: string) => {
+export const RegisterUser = async (
+  name: string,
+  username: string | null,
+  email: string,
+  password: string,
+) => {
   const headers = new Headers()
   headers.append('Content-Type', 'application/json')
 
@@ -8,7 +13,7 @@ export const RegisterUser = async (name: string, username: string | null, email:
     password: password,
     address: '',
     phone: '',
-		username: username
+    username: username,
   })
 
   const requestOptions = {

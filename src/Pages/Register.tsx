@@ -22,7 +22,7 @@ export const Register = () => {
   const { theme } = useThemeContext()
 
   const [name, setName] = useState('')
-	const [username, setUsername] = useState('')
+  const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -49,7 +49,7 @@ export const Register = () => {
               placeholder='Jhon Doe'
             />
           </StyledFieldset>
-					<StyledFieldset>
+          <StyledFieldset>
             <StyledLabel htmlFor='username-input'>Crea un nombre de usuario:</StyledLabel>
             <StyledInput
               theme={theme}

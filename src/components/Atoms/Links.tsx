@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ThemeProps, IStyledComponent } from 'shared'
@@ -14,9 +13,9 @@ export const PrimaryLink = styled(Link)<IStyledComponent>`
   font-weight: 500;
   justify-content: center;
   padding: 8px;
-	text-overflow: clip;
-	white-space: nowrap;
-	width: fit-content;
+  text-overflow: clip;
+  white-space: nowrap;
+  width: fit-content;
   transition: background-color 0.3s ease;
 
   &:hover {

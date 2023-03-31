@@ -13,7 +13,7 @@ const StyledButton = styled('button')<IStyledComponent>`
 
   &:hover {
     background-color: rgb(219 39 119);
-		cursor: pointer;
+    cursor: pointer;
   }
 `
 
