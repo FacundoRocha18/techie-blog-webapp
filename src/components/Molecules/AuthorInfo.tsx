@@ -28,7 +28,7 @@ export const AuthorAvatar = styled('img')`
  */
 
 export const AuthorName = styled('p')`
-  color: #b8b8b8;
+  color: var(--primary-accent);
   grid-column: span 1 / span 1;
 `
 
