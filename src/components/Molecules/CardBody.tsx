@@ -96,7 +96,7 @@ export const CardBody = ({ data }: { data: IPost }) => {
           <AuthorAvatar src={data.author_avatar} />
           <div>
             <Link to={`post/${data.post_uuid}`}>
-              <StyledTitle aria-rowspan={1} aria-colspan={1}>
+              <StyledTitle aria-rowspan={1} aria-colspan={1} title={data.title}>
                 {data.title}
               </StyledTitle>
             </Link>

@@ -1,4 +1,4 @@
-export const RegisterUserSupabaseAPI = async (name: string, email: string, password: string) => {
+export const RegisterUserSupabaseAPI = async (name: string, username: string | null, email: string, password: string) => {
   const apiKey =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhY2JicnlrZ2xzdGd3cmVjZmRlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDE3MDU4NywiZXhwIjoxOTg5NzQ2NTg3fQ.kJeFN0A_dc2oA8L_wt3Qt9dyZyVtVo-ZyhnD6JKVOlE'
 
@@ -14,6 +14,7 @@ export const RegisterUserSupabaseAPI = async (name: string, email: string, passw
     password: password,
     address: '',
     phone: '',
+		username: username,
   })
 
   const requestOptions = {

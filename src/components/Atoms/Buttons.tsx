@@ -1,6 +1,5 @@
-import { IStyledComponent } from 'components.types'
 import styled from 'styled-components'
-import { ThemeProps } from 'types'
+import { ThemeProps, IStyledComponent } from 'shared'
 
 const StyledButton = styled('button')<IStyledComponent>`
   align-items: center;
@@ -14,6 +13,7 @@ const StyledButton = styled('button')<IStyledComponent>`
 
   &:hover {
     background-color: rgb(219 39 119);
+		cursor: pointer;
   }
 `
 

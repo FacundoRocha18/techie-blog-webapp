@@ -13,7 +13,7 @@ export const StyledTitle = styled(StyledHeading)<IStyledComponent>`
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: fit-content;
-	max-width: 700px;
+	max-width: 600px;
 `
 
 export const StyledSubtitle = styled(StyledHeading)<IStyledComponent>`

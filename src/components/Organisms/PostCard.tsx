@@ -14,7 +14,7 @@ const StyledCard = styled('article')`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, auto);
-  min-height: 325px;
+  min-height: fit-content;
 
   & > a img {
     border-radius: 0px;
