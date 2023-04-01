@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { useState, useEffect } from 'react'
-import { IPost } from 'types'
+import { IPost } from 'shared'
 
 export const usePost = (uuid: string, posts: IPost[]) => {
   const [currentPost, setCurrentPost] = useState<IPost>({
@@ -9,7 +9,7 @@ export const usePost = (uuid: string, posts: IPost[]) => {
     title: 'Nueva generación de procesadores AMD Ryzen',
     theme: 'Hardware',
     author_uuid: '816950e8-3e87-4c56-ab6e-4b6af344d003',
-    author_name: 'Facundo Rocha',
+    author_username: 'jhondoe',
     author_avatar:
       'https://uacbbrykglstgwrecfde.supabase.co/storage/v1/object/sign/avatars/avatar.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL2F2YXRhci5wbmciLCJpYXQiOjE2NzY3NDc0MjEsImV4cCI6MTcwODI4MzQyMX0.nU6P5XHPh2ixWlm-lBqHWihNp36LSgcq6JGjBPjsbMc&t=2023-02-18T19%3A10%3A21.991Z',
     content:

@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { usePostsContext } from 'contexts/PostsContext'
 import { usePost } from 'hooks'
-import { IPost } from 'types'
 import { PostHeading, PostBody, StyledArticle } from 'components'
+import { IPost } from 'shared'
 
 interface MyParams {
   id: string

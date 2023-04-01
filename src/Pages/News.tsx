@@ -1,5 +1,4 @@
 import {
-  StyledContainer,
   StyledSection,
   CardTemplate,
   PostCard,
@@ -8,6 +7,7 @@ import {
 } from 'components'
 import { usePostsContext } from 'contexts/PostsContext'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
+import { IPost } from 'shared'
 
 export const News = () => {
   const { posts, loading } = usePostsContext()
@@ -20,7 +20,7 @@ export const News = () => {
         {loading ? (
           <CardTemplate />
         ) : (
-          posts.map((post) => <PostCard key={post.post_uuid} data={post} />)
+          posts.map((post: IPost) => <PostCard key={post.post_uuid} data={post} />)
         )}
       </StyledGridContainer>
     </StyledSection>
