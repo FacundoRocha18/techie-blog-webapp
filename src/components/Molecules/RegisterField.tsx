@@ -32,7 +32,7 @@ export const RegisterField = ({
         theme={theme}
         type={type}
         name={name}
-        id=''
+        id={id}
         value={value}
         onChange={(value) => handleOnChange(value)}
         placeholder={placeholder}
