@@ -5,7 +5,7 @@ export enum Colors {
   BLACKTRANSLUCENT = '--black-translucent',
   WHITE = '--white',
   LIGHTGRAYTRANSLUCENT = '--gray-translucent',
-	LIGHTGRAY = '--light-gray',
+  LIGHTGRAY = '--light-gray',
   GRAY = '--gray-300',
   DARKGRAY = '--gray-900',
   DARKZINC = '--zinc-700',

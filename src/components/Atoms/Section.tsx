@@ -1,14 +1,11 @@
 import styled from 'styled-components'
-import { IStyledComponent } from 'components.types'
-import { ThemeProps } from 'types'
+import { ThemeProps, IStyledComponent } from 'shared'
 
 export const StyledSection = styled('section')<IStyledComponent>`
-  align-items: flex-start;
   color: var(${({ theme }: ThemeProps) => theme.color});
   display: flex;
   flex-direction: column;
   gap: 16px;
-  justify-content: center;
   padding: 16px;
   min-height: 100vh;
   height: fit-content;

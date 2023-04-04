@@ -2,7 +2,7 @@ import { StyledImage, StyledTitle, AuthorAvatar, AuthorName, AuthorTag, Author }
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { IPost, ThemeProps } from 'types'
+import { IPost, ThemeProps } from 'shared'
 
 const StyledPostHeading = styled('section')`
   display: flex;
@@ -51,7 +51,7 @@ export const PostHeading = ({ post }: { post: IPost }) => {
       <InfoContainer theme={theme}>
         <Author>
           <AuthorAvatar src={post.author_avatar} />
-          <AuthorName>{post.author_name}</AuthorName>
+          <AuthorName>{post.author_username}</AuthorName>
           <AuthorTag theme={theme}>Autor</AuthorTag>
         </Author>
         {/* <DateContainer>

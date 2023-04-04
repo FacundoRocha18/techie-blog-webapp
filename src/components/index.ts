@@ -16,6 +16,7 @@ export * from './Molecules/Overlay'
 export * from './Molecules/Menu'
 export * from './Molecules/Navigation'
 export * from './Molecules/AuthorInfo'
+export * from './Molecules/RegisterField'
 
 // Atoms
 export * from './Atoms/Buttons'
@@ -35,3 +36,4 @@ export * from './Atoms/Icon'
 export * from './Atoms/Article'
 export * from './Atoms/Sidebar'
 export * from './Atoms/Decorators'
+export * from './Atoms/UsernameAvailability'

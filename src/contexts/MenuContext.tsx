@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { useState } from 'react'
 import { createContextCustom } from 'hooks'
-import { ChildrenProps } from 'types'
+import { ChildrenProps } from 'shared'
 
 interface IMenuContext {
   isVisible: boolean

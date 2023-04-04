@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import {
-  AuthorAvatar,
-  Author,
-  AuthorName,
-  StyledTitle,
-} from 'components'
+import { AuthorAvatar, Author, AuthorName, StyledTitle } from 'components'
 import { IPost, ThemeProps } from 'shared'
 import { useThemeContext } from 'contexts/Theme/ThemeContext'
 
@@ -100,7 +95,9 @@ export const CardBody = ({ data }: { data: IPost }) => {
                 {data.title}
               </StyledTitle>
             </Link>
-            <AuthorName><a href="#">@{data.author_name}</a></AuthorName>
+            <AuthorName>
+              <a href='#'>@{data.author_username.replace(' ', '').toLowerCase()}</a>
+            </AuthorName>
           </div>
         </Author>
       </AuthorContainer>

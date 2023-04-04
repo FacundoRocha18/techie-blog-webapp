@@ -9,11 +9,15 @@ const StyledHeading = styled('h2')<IStyledComponent>`
 export const StyledTitle = styled(StyledHeading)<IStyledComponent>`
   font-size: var(--heading-text);
   font-weight: var(--heading-weight);
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: fit-content;
-	max-width: 600px;
+
+  @media only screen and (min-width: 768px) {
+    & {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 600px;
+    }
+  }
 `
 
 export const StyledSubtitle = styled(StyledHeading)<IStyledComponent>`

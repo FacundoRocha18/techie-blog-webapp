@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import React from 'react'
 
 export interface IThemeContext {
@@ -37,7 +38,7 @@ export interface IPost {
   title: string
   theme: string
   author_uuid: string
-  author_name: string
+  author_username: string
   author_avatar: string
   content: string
   created_at: string

@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { createContextCustom } from 'hooks'
 import { RegisterUser } from 'services/TechieAPI/RegisterUser'
-import { ChildrenProps } from 'types'
+import { ChildrenProps } from 'shared'
 
 interface IUserContext {
   signIn: Function

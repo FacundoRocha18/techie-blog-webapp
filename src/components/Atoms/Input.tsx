@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { IStyledComponent } from 'components.types'
-import { ThemeProps } from 'types'
+import { ThemeProps, IStyledComponent } from 'shared'
 
 export const StyledInput = styled('input')<IStyledComponent>`
   border: 2px solid

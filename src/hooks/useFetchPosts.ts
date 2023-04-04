@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { fetchPosts } from 'services/TechieAPI/FetchPosts'
 import { fetchPostsFromSupabase } from 'services/SupabaseAPI/FetchPostsFromSupabase'
-import { IPost } from 'types'
+import { IPost } from 'shared'
 
 export const useFetchPosts = () => {
   const [posts, setPosts] = useState<IPost[]>([])
