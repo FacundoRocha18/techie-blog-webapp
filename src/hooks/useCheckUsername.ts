@@ -1,23 +1,18 @@
 import { useState, useEffect } from 'react'
 import { fetchValidateUsername } from 'services/TechieAPI/FetchValidateUsername'
 
-
 export const useCheckUsername = (username: string) => {
+  const [usernameIsAvailable, setUsernameIsAvailable] = useState(true)
 
-		const [usernameIsAvailable, setUsernameIsAvailable] = useState(true)
-	
-		useEffect(() => {
-	
-			handleUsernameChanged()
-	
-		}, [username])
+  useEffect(() => {
+    handleUsernameChanged()
+  }, [username])
 
-		const handleUsernameChanged = async () => {
+  const handleUsernameChanged = async () => {
+    const result = await fetchValidateUsername(username)
 
-			const result = await fetchValidateUsername(username)
-		
-			setUsernameIsAvailable(result)
-		}
+    setUsernameIsAvailable(result)
+  }
 
-		return usernameIsAvailable
-	}
+  return usernameIsAvailable
+}

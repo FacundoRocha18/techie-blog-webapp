@@ -6,6 +6,6 @@ export const StyledInput = styled('input')<IStyledComponent>`
     var(${({ theme }: ThemeProps) => (theme.name === 'light' ? '--black' : theme.translucent)});
   border-radius: 2px;
   color: var(${({ theme }: ThemeProps) => theme.inputColor});
-	grid-column: span 4 / span 4;
+  grid-column: span 4 / span 4;
   padding: 8px;
 `

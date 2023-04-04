@@ -151,7 +151,7 @@ export const Header = () => {
   const { theme } = useThemeContext()
   const { isActiveClass, setIsVisible } = useMenuContext()
 
-	const title = '<TechieBlog />'
+  const title = '<TechieBlog />'
 
   return (
     <>

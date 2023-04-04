@@ -22,17 +22,14 @@ const StyledBodyParagraph = styled('p')`
 `
 
 export const PostBody = ({ post }: { post: IPost }) => {
+  const paragraphs = post.content.split('\n\n')
 
-	const paragraphs = post.content.split('\n\n')
-
-	return (
-		<StyledBodyContainer>
-			{
-				paragraphs.map((paragraph: string, index: number) => (
-					<StyledBodyParagraph key={index}>{paragraph}</StyledBodyParagraph>
-				))
-			}
-			{/* <StyledImage
+  return (
+    <StyledBodyContainer>
+      {paragraphs.map((paragraph: string, index: number) => (
+        <StyledBodyParagraph key={index}>{paragraph}</StyledBodyParagraph>
+      ))}
+      {/* <StyledImage
 				src={
 					'https://uacbbrykglstgwrecfde.supabase.co/storage/v1/object/sign/images/ryzen%207000.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvcnl6ZW4gNzAwMC5qcGciLCJpYXQiOjE2Nzc2OTY0OTksImV4cCI6MTcwOTIzMjQ5OX0.Ol2O2kmyFW7wKukZOBgYOdftooQBFrOmhXrwIU7gyx8&t=2023-03-01T18%3A48%3A19.484Z'
 				}
@@ -40,10 +37,10 @@ export const PostBody = ({ post }: { post: IPost }) => {
 				height='100%'
 				width='100%'
 			/> */}
-		</StyledBodyContainer>
-	)
+    </StyledBodyContainer>
+  )
 }
 
 PostBody.propTypes = {
-	post: PropTypes.object.isRequired,
+  post: PropTypes.object.isRequired,
 }
