@@ -151,12 +151,14 @@ export const Header = () => {
   const { theme } = useThemeContext()
   const { isActiveClass, setIsVisible } = useMenuContext()
 
+	const title = '<TechieBlog />'
+
   return (
     <>
       <HeaderOuterArea className={isActiveClass}>
         <HeaderInnerArea theme={theme}>
           <Link to={'/'} className='header-title' onClick={() => setIsVisible(false)}>
-            <StyledTitle>TechieBlog</StyledTitle>
+            <StyledTitle>{title}</StyledTitle>
           </Link>
           <HeaderButtonContainer>
             <MenuToggle />
